@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "zhoutaoq personal websites"
+title: "Personal introduction"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -10,14 +10,32 @@ redirect_from:
 
 ## Personal profile
 
-[//]: # (This is the front page of a website that is powered by the [template]&#40;https://github.com/zhoutaoq/zhoutaoq.github.io&#41; and hosted on GitHub pages. [GitHub pages]&#40;https://pages.github.com&#41; is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme]&#40;https://mmistakes.github.io/minimal-mistakes/&#41; created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository]&#40;https://github.com/zhoutaoq/zhoutaoq.github.io&#41; right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com]&#40;http://stuartgeiger.com&#41;, which uses [this Github repository]&#40;https://github.com/staeiou/staeiou.github.io&#41;.)
+I graduated from Shanghai University of Applied Technology and am currently engaged in software development, focusing on developing products that are beneficial to society, have commercial value and are user-friendly.
 
-[//]: # ()
-[//]: # (A data-driven personal website)
 
-[//]: # (======)
+## skill
 
-[//]: # (Like many other Jekyll-based GitHub Pages templates, zhoutaoq makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown &#40;.md&#41;, YAML &#40;.yml&#41;, HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages]&#40;https://pages.github.com/&#41; service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.)
+### Java | Spring | MySQL | Redis | Kafka | MyBatis
 
-[//]: # ()
-[//]: # (Many of the features of dynamic content management systems &#40;like Wordpress&#41; can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one]&#40;https://github.com/zhoutaoq/zhoutaoq.github.io/blob/master/talkmap.ipynb&#41; that analyzes metadata in pages about talks to display [a map of every location you've given a talk]&#40;https://zhoutaoq.github.io/talkmap.html&#41;.)
+- 5 years + of Java use experience, including Java web app development, Java sdk development, Java tool development, proficient in the use of Spring ecosystem, and good at building stable, high-performance services
+
+
+### JS | Vue
+
+- 5 years + of experience in using js, although I am not a professional front-end engineer, I still often use js to fix bugs or complete some functions in my work, and I also use vue to build some small products for my own use
+
+
+### Python | FastAPI
+
+- 2 years + of Python experience, good at using python to write a variety of scripts, rest api interface and so on
+
+### Linux | Shell | Docker | Kubernetes | DevOps
+
+- 5 years + of experience in using Linux, good at using shell to complete some repetitive work, and familiar with the use of Docker, Kubernetes, and DevOps
+
+
+## finally
+
+Of course, if you have a good idea or a collaboration opportunity, feel free to contact me!
+
+
