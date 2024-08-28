@@ -86,7 +86,7 @@ author:
   location         : "Shanghai, China"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://zhoutaoq.com"
+  googlescholar    : 
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/zhoutaoq"
+  github           : "zhoutaoq"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/%E9%99%B6%E5%BC%BA-%E5%91%A8-ab2493303/"
-  orcid            : "http://orcid.org/zhoutaoq"
+  linkedin         : "%E9%99%B6%E5%BC%BA-%E5%91%A8-ab2493303/"
+  orcid            : "zhoutaoq"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/zhoutaoq
   steam            :
   tumblr           :
-  twitter          : "https://x.com/hideZhou"
+  twitter          : "hideZhou"
   vine             :
   weibo            :
   xing             :
