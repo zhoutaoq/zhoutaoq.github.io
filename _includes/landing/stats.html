@@ -1,0 +1,17 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section class="band band--surface">
+  <div class="band__inner">
+    <ul class="stats">
+      {% for s in t.stats %}
+        <li class="stats__item" data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms">
+          <p class="stats__num">
+            <span data-count="{{ s.value }}">0</span><span class="stats__suffix">{{ s.suffix }}</span>
+          </p>
+          <p class="stats__label">{{ s.label }}</p>
+          <p class="stats__note">{{ s.note }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

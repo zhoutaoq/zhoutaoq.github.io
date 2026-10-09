@@ -1,7 +1,7 @@
 # main links links
 main:
-  - title: "Chinese"
-    url: /cn/
+  - title: "GitHub"
+    url: "https://github.com/zhoutaoq"
 
 #  - title: "Talks"
 #    url: /talks/

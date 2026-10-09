@@ -35,4 +35,13 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
+<!-- 头像外圈渐变需要能插值旋转的角度变量；放这里是为了绕开老版 sass 编译器 -->
+<style>
+  @property --ang {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+</style>
+
 <!-- end custom head snippets -->

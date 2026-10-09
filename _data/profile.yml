@@ -1,0 +1,237 @@
+# 首页/中文页的内容源，按语言分两组
+# 改文案只动这里，不动页面模板
+en:
+  eyebrow: 'Software Developer · Shanghai, China'
+  hello: "Hi, I'm"
+  name: 'zhoutaoq'
+  typed_prefix: 'I build'
+  typed:
+    - 'distributed services'
+    - 'Java backends'
+    - 'data pipelines'
+    - 'developer tooling'
+  lead: 'Graduated from Shanghai University of Applied Technology. I focus on building products that are beneficial to society, commercially valuable, and user-friendly.'
+  actions:
+    - label: 'Get in Touch'
+      url: 'mailto:zhoutaoq1029@gmail.com'
+      icon: 'fas fa-envelope'
+      variant: 'primary'
+    - label: 'GitHub'
+      url: 'https://github.com/zhoutaoq'
+      icon: 'fab fa-github'
+      variant: 'ghost'
+  chips:
+    - icon: 'fas fa-map-marker-alt'
+      text: 'Shanghai, China'
+    - icon: 'fas fa-envelope'
+      text: 'zhoutaoq1029@gmail.com'
+      url: 'mailto:zhoutaoq1029@gmail.com'
+
+  stats:
+    - value: 5
+      suffix: '+'
+      label: 'Years with Java'
+      note: 'Backend & distributed services'
+    - value: 5
+      suffix: '+'
+      label: 'Years with JavaScript'
+      note: 'Frontend development & debugging'
+    - value: 2
+      suffix: '+'
+      label: 'Years with Python'
+      note: 'Automation scripts & REST APIs'
+    - value: 4
+      suffix: ''
+      label: 'Tech Domains'
+      note: 'Backend · Frontend · Python · DevOps'
+
+  focus:
+    eyebrow: 'What I focus on'
+    title: 'Engineering with a purpose'
+    lead: 'Three things I keep in mind for every product I touch.'
+    items:
+      - icon: 'fas fa-globe'
+        title: 'Beneficial to Society'
+        text: 'Build things that are genuinely useful to real people, not just demos that look good in a slide deck.'
+      - icon: 'fas fa-chart-line'
+        title: 'Commercially Valuable'
+        text: 'Design services that stay stable under load, perform well, and earn their keep in production.'
+      - icon: 'fas fa-heart'
+        title: 'Pleasant to Use'
+        text: 'Clean APIs and interfaces that are easy to pick up, hard to misuse, and calm to maintain.'
+
+  stack:
+    eyebrow: 'Tech Stack'
+    title: 'Tools I work with every day'
+    lead: 'Five years of hands-on Java and JavaScript, two years of Python, and a Linux-first workflow.'
+    groups:
+      - icon: 'fas fa-server'
+        title: 'Backend Development'
+        tags: ['Java', 'Spring', 'MySQL', 'Redis', 'Kafka', 'MyBatis']
+        points:
+          - '5+ years of Java development experience'
+          - 'Java Web applications, SDK development and internal tooling'
+          - 'Extensive experience across the Spring ecosystem'
+          - 'Stable, high-performance distributed services'
+      - icon: 'fas fa-code'
+        title: 'Frontend Development'
+        tags: ['JavaScript', 'Vue']
+        points:
+          - '5+ years of JavaScript experience'
+          - 'Independent frontend development and bug fixing'
+          - 'Personal projects and small applications with Vue'
+      - icon: 'fab fa-python'
+        title: 'Python Development'
+        tags: ['Python', 'FastAPI']
+        points:
+          - '2+ years of Python development experience'
+          - 'Automation scripts and internal tools'
+          - 'RESTful API services'
+      - icon: 'fas fa-cubes'
+        title: 'DevOps & Infrastructure'
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'DevOps']
+        points:
+          - '5+ years of Linux experience'
+          - 'Shell scripting for repetitive and scheduled work'
+          - 'Docker containerisation and Kubernetes orchestration'
+          - 'DevOps practices and release workflows'
+
+  contact:
+    eyebrow: 'Get in Touch'
+    title: "Let's build something"
+    lead: 'Feel free to reach out if you have interesting ideas or collaboration opportunities.'
+    items:
+      - icon: 'fas fa-envelope'
+        label: 'Email'
+        value: 'zhoutaoq1029@gmail.com'
+        url: 'mailto:zhoutaoq1029@gmail.com'
+      - icon: 'fab fa-github'
+        label: 'GitHub'
+        value: '@zhoutaoq'
+        url: 'https://github.com/zhoutaoq'
+      - icon: 'fab fa-linkedin'
+        label: 'LinkedIn'
+        value: 'zhoutaoq'
+        url: 'https://linkedin.com/in/zhoutaoq'
+      - icon: 'fab fa-twitter'
+        label: 'Twitter'
+        value: '@hideZhou'
+        url: 'https://twitter.com/hideZhou'
+
+zh:
+  eyebrow: '软件开发工程师 · 上海'
+  hello: '你好，我是'
+  name: 'zhoutaoq'
+  typed_prefix: '我写'
+  typed:
+    - '分布式服务'
+    - 'Java 后端'
+    - '数据管道'
+    - '研发工具'
+  lead: '我毕业于上海应用技术大学，目前从事软件开发工作。专注于开发对社会有益、具有商业价值且人性化的产品。'
+  actions:
+    - label: '联系我'
+      url: 'mailto:zhoutaoq1029@gmail.com'
+      icon: 'fas fa-envelope'
+      variant: 'primary'
+    - label: 'GitHub'
+      url: 'https://github.com/zhoutaoq'
+      icon: 'fab fa-github'
+      variant: 'ghost'
+  chips:
+    - icon: 'fas fa-map-marker-alt'
+      text: '中国 · 上海'
+    - icon: 'fas fa-envelope'
+      text: 'zhoutaoq1029@gmail.com'
+      url: 'mailto:zhoutaoq1029@gmail.com'
+
+  stats:
+    - value: 5
+      suffix: '+'
+      label: '年 Java 经验'
+      note: '后端与分布式服务'
+    - value: 5
+      suffix: '+'
+      label: '年 JavaScript 经验'
+      note: '前端开发与 Bug 修复'
+    - value: 2
+      suffix: '+'
+      label: '年 Python 经验'
+      note: '自动化脚本与 REST API'
+    - value: 4
+      suffix: ''
+      label: '个技术方向'
+      note: '后端 · 前端 · Python · 运维'
+
+  focus:
+    eyebrow: '我在意什么'
+    title: '做有目的的工程'
+    lead: '每做一个产品，我都会想这三件事。'
+    items:
+      - icon: 'fas fa-globe'
+        title: '对社会有益'
+        text: '做真正对使用者有用的东西，而不是只在演示里好看的半成品。'
+      - icon: 'fas fa-chart-line'
+        title: '有商业价值'
+        text: '服务要扛得住压力、跑得稳、在线上自己赚得回成本。'
+      - icon: 'fas fa-heart'
+        title: '人性化'
+        text: '接口和界面都好上手、不容易用错，维护起来也不折磨人。'
+
+  stack:
+    eyebrow: '技术栈'
+    title: '日常在用的工具'
+    lead: '五年 Java 与 JavaScript 实战，两年 Python，Linux 优先的工作流。'
+    groups:
+      - icon: 'fas fa-server'
+        title: '后端开发'
+        tags: ['Java', 'Spring', 'MySQL', 'Redis', 'Kafka', 'MyBatis']
+        points:
+          - '5 年以上 Java 开发经验'
+          - '涵盖 Java Web 应用、SDK 开发、工具类开发'
+          - '熟练使用 Spring 生态系统'
+          - '擅长构建稳定、高性能的分布式服务'
+      - icon: 'fas fa-code'
+        title: '前端开发'
+        tags: ['JavaScript', 'Vue']
+        points:
+          - '5 年以上 JavaScript 使用经验'
+          - '能够独立完成前端功能开发和 Bug 修复'
+          - '使用 Vue 构建个人项目和小型应用'
+      - icon: 'fab fa-python'
+        title: 'Python 开发'
+        tags: ['Python', 'FastAPI']
+        points:
+          - '2 年以上 Python 开发经验'
+          - '擅长编写自动化脚本和工具'
+          - '能够开发 RESTful API 接口'
+      - icon: 'fas fa-cubes'
+        title: 'DevOps & 运维'
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'DevOps']
+        points:
+          - '5 年以上 Linux 使用经验'
+          - '擅长使用 Shell 脚本自动化处理重复性工作'
+          - '熟悉 Docker 容器化和 Kubernetes 编排'
+          - '了解 DevOps 流程和最佳实践'
+
+  contact:
+    eyebrow: '联系合作'
+    title: '一起做点东西'
+    lead: '如果你有好的想法或合作机会，欢迎随时与我联系。'
+    items:
+      - icon: 'fas fa-envelope'
+        label: '邮箱'
+        value: 'zhoutaoq1029@gmail.com'
+        url: 'mailto:zhoutaoq1029@gmail.com'
+      - icon: 'fab fa-github'
+        label: 'GitHub'
+        value: '@zhoutaoq'
+        url: 'https://github.com/zhoutaoq'
+      - icon: 'fab fa-linkedin'
+        label: 'LinkedIn'
+        value: 'zhoutaoq'
+        url: 'https://linkedin.com/in/zhoutaoq'
+      - icon: 'fab fa-twitter'
+        label: 'Twitter'
+        value: '@hideZhou'
+        url: 'https://twitter.com/hideZhou'

@@ -1,0 +1,21 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section class="band">
+  <div class="band__inner">
+    <header class="sec__head" data-reveal>
+      <p class="sec__eyebrow">{{ t.focus.eyebrow }}</p>
+      <h2 class="sec__title">{{ t.focus.title }}</h2>
+      <p class="sec__lead">{{ t.focus.lead }}</p>
+    </header>
+
+    <ul class="feature">
+      {% for item in t.focus.items %}
+        <li class="card feature__card" data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms" data-spotlight>
+          <span class="card__icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
+          <h3 class="card__title">{{ item.title }}</h3>
+          <p class="card__text">{{ item.text }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
