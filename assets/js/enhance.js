@@ -59,6 +59,7 @@
     $$('[data-reveal]').forEach(function (el) {
       el.classList.add('is-in');
     });
+    startCounters(document);
   }
 
   function initReveal() {
@@ -77,6 +78,7 @@
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           entry.target.classList.add('is-in');
+          startCounters(entry.target);
           io.unobserve(entry.target);
         });
       },
@@ -132,27 +134,13 @@
     window.requestAnimationFrame(step);
   }
 
-  function initCounters() {
-    var nums = $$('[data-count]');
-    if (!nums.length) return;
+  /* 数字滚动跟着入场一起触发，快速滚动不会跳过 --------------------------- */
 
-    if (!('IntersectionObserver' in window)) {
-      nums.forEach(countUp);
-      return;
-    }
-
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          countUp(entry.target);
-          io.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.4 }
-    );
-    nums.forEach(function (el) {
-      io.observe(el);
+  function startCounters(root) {
+    $$('[data-count]', root).forEach(function (el) {
+      if (el.getAttribute('data-counted')) return;
+      el.setAttribute('data-counted', '1');
+      countUp(el);
     });
   }
 
@@ -395,7 +383,6 @@
   function boot() {
     initMasthead();
     initReveal();
-    initCounters();
     initTyped();
     initParticles();
     initSpotlight();
