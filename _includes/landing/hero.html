@@ -1,0 +1,53 @@
+{% include base_path %}
+{% assign t = site.data.profile[page.lang] %}
+
+<section class="hero" data-hero>
+  <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow" data-reveal style="--d:0ms">
+        <span class="hero__pulse" aria-hidden="true"></span>{{ t.eyebrow }}
+      </p>
+
+      <h1 class="hero__title" data-reveal style="--d:80ms">
+        {{ t.hello }} <span class="hero__name">{{ t.name }}</span><br>
+        <span class="hero__rotator">
+          {{ t.typed_prefix }} <span class="hero__typed" data-typed>{% for w in t.typed %}<span>{{ w }}</span>{% endfor %}</span><span class="hero__caret" aria-hidden="true"></span>
+        </span>
+      </h1>
+
+      <p class="hero__lead" data-reveal style="--d:160ms">{{ t.lead }}</p>
+
+      <div class="hero__actions" data-reveal style="--d:240ms">
+        {% for a in t.actions %}
+          <a class="pill pill--{{ a.variant }}" href="{{ a.url }}"{% if a.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+            <i class="{{ a.icon }}" aria-hidden="true"></i><span>{{ a.label }}</span>
+          </a>
+        {% endfor %}
+      </div>
+
+      <ul class="hero__chips" data-reveal style="--d:320ms">
+        {% for c in t.chips %}
+          <li>
+            {% if c.url %}<a href="{{ c.url }}">{% endif %}
+            <i class="{{ c.icon }}" aria-hidden="true"></i>{{ c.text }}
+            {% if c.url %}</a>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="hero__portrait" data-reveal style="--d:160ms">
+      <div class="hero__avatar-wrap" data-tilt>
+        <span class="hero__avatar-glow" aria-hidden="true"></span>
+        <img class="hero__avatar" src="{{ base_path }}/images/profile.png" alt="{{ site.author.name }}" width="240" height="240">
+        <span class="hero__avatar-ring" aria-hidden="true"></span>
+      </div>
+      <div class="hero__badge">
+        <i class="fas fa-terminal" aria-hidden="true"></i>
+        <span>{{ site.author.bio }}</span>
+      </div>
+    </div>
+  </div>
+</section>

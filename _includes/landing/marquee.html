@@ -1,0 +1,10 @@
+<div class="marquee" data-marquee>
+  <div class="marquee__track">
+    {% assign tech = "Java,Spring,MySQL,Redis,Kafka,MyBatis,JavaScript,Vue,Python,FastAPI,Linux,Shell,Docker,Kubernetes,DevOps" | split: "," %}
+    {% for pass in (1..2) %}
+      <div class="marquee__group"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+        {% for item in tech %}<span class="marquee__item">{{ item }}</span>{% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

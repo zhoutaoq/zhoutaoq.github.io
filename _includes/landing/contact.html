@@ -1,0 +1,23 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section class="band">
+  <div class="band__inner">
+    <header class="sec__head sec__head--center" data-reveal>
+      <p class="sec__eyebrow">{{ t.contact.eyebrow }}</p>
+      <h2 class="sec__title">{{ t.contact.title }}</h2>
+      <p class="sec__lead">{{ t.contact.lead }}</p>
+    </header>
+
+    <ul class="contact">
+      {% for c in t.contact.items %}
+        <li data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms">
+          <a class="card contact__tile" href="{{ c.url }}"{% if c.url contains 'http' %} target="_blank" rel="noopener"{% endif %} data-spotlight>
+            <span class="card__icon" aria-hidden="true"><i class="{{ c.icon }}"></i></span>
+            <span class="contact__label">{{ c.label }}</span>
+            <span class="contact__value">{{ c.value }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
