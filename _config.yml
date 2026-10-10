@@ -7,8 +7,8 @@
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "zhoutaoq"
-title_separator          : "|"
+title                    : "zhoutaoq profile"
+title_separator          : "·"
 name                     : &name "zhoutaoq"
 description              : &description "Software Developer | Java Specialist"
 url                      : https://zhoutaoq.github.io
