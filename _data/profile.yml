@@ -20,6 +20,10 @@ en:
       url: 'https://github.com/zhoutaoq'
       icon: 'fab fa-github'
       variant: 'ghost'
+    - label: 'Gitee'
+      url: 'https://gitee.com/zhoutaoq1029'
+      icon_svg: 'gitee'
+      variant: 'ghost'
   chips:
     - icon: 'fas fa-map-marker-alt'
       text: 'Shanghai, China'
@@ -141,6 +145,10 @@ zh:
     - label: 'GitHub'
       url: 'https://github.com/zhoutaoq'
       icon: 'fab fa-github'
+      variant: 'ghost'
+    - label: 'Gitee'
+      url: 'https://gitee.com/zhoutaoq1029'
+      icon_svg: 'gitee'
       variant: 'ghost'
   chips:
     - icon: 'fas fa-map-marker-alt'
