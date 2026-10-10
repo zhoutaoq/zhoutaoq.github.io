@@ -7,8 +7,10 @@
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "zhoutaoq profile"
+title                    : "Zhoutaoq's Personal Profile"
 title_separator          : "·"
+# 顶栏站标文字。窄屏放不下长标题，这里单列一个短名
+brand                    : "zhoutaoq profile"
 name                     : &name "zhoutaoq"
 description              : &description "Software Developer | Java Specialist"
 url                      : https://zhoutaoq.github.io

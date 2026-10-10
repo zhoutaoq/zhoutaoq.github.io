@@ -2,11 +2,12 @@
 
 <!-- start custom head snippets -->
 
-<!-- 站点图标统一用头像（由 images/profile.png 生成的圆形图） -->
-<link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="{{ base_path }}/images/favicon-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon.png">
-<link rel="manifest" href="{{ base_path }}/images/manifest.json">
+<!-- 站点图标统一用头像（由 images/profile.png 生成的圆形图）；带版本号避免浏览器沿用旧的 404 缓存 -->
+<link rel="icon" href="{{ base_path }}/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ base_path }}/images/favicon-192x192.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon.png?v=2">
+<link rel="manifest" href="{{ base_path }}/images/manifest.json?v=2">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
