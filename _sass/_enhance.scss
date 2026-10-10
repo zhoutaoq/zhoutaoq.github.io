@@ -235,16 +235,17 @@ body,
   color: var(--ink);
   font-weight: 700;
   letter-spacing: -0.01em;
+}
 
-  &::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    margin-right: 0.55rem;
-    border-radius: 5px;
-    background: linear-gradient(140deg, #3aa0ff, #007fff);
-    box-shadow: 0 4px 10px rgba(0, 127, 255, 0.35);
-  }
+/* 站标就用头像 */
+.masthead__avatar {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  margin-right: 0.55rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--line-strong);
 }
 
 .masthead__menu-item a {
