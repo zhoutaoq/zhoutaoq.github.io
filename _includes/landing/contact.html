@@ -12,7 +12,7 @@
       {% for c in t.contact.items %}
         <li data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms">
           <a class="card contact__tile" href="{{ c.url }}"{% if c.url contains 'http' %} target="_blank" rel="noopener"{% endif %} data-spotlight>
-            <span class="card__icon" aria-hidden="true"><i class="{{ c.icon }}"></i></span>
+            <span class="card__icon" aria-hidden="true">{% if c.icon_svg %}{% include svg/gitee.html %}{% else %}<i class="{{ c.icon }}"></i>{% endif %}</span>
             <span class="contact__label">{{ c.label }}</span>
             <span class="contact__value">{{ c.value }}</span>
           </a>

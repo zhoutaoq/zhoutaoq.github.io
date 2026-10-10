@@ -13,6 +13,10 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  /* 主题在样式表之前贴上去，暗色用户首屏不会闪白 */
+  try {
+    if (window.localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  } catch (e) {}
 </script>
 
 <!-- For all browsers -->

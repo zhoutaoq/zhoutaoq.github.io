@@ -14,6 +14,63 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   }
 
+  /* 亮暗色切换 ------------------------------------------------------------ */
+
+  var THEME_KEY = 'theme';
+
+  function applyTheme(theme) {
+    var root = document.documentElement;
+    var dark = theme === 'dark';
+
+    if (dark) root.setAttribute('data-theme', 'dark');
+    else root.removeAttribute('data-theme');
+
+    $$('meta[name="theme-color"]').forEach(function (meta) {
+      meta.setAttribute('content', dark ? '#0b0d0f' : '#ffffff');
+    });
+
+    $$('[data-theme-toggle]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    });
+
+    document.dispatchEvent(new Event('enhance:theme'));
+  }
+
+  function storedTheme() {
+    try {
+      return window.localStorage.getItem(THEME_KEY);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function initTheme() {
+    // 首屏已在 head 里贴过一遍，这里补上按钮状态和 meta
+    applyTheme(storedTheme() === 'dark' ? 'dark' : 'light');
+
+    var btn = $('[data-theme-toggle]');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      try {
+        window.localStorage.setItem(THEME_KEY, next);
+      } catch (e) {
+        /* 隐私模式下写不进去，忽略 */
+      }
+    });
+  }
+
+  /* 从 token 里取主色，暗色下粒子也要跟着变亮 */
+  function readBrand() {
+    var value = window.getComputedStyle(document.documentElement).getPropertyValue('--brand').trim();
+    var hex = /^#([0-9a-f]{6})$/i.exec(value);
+    if (!hex) return [0, 127, 255];
+    var n = parseInt(hex[1], 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+
   /* 顶栏滚动态 + 阅读进度条 ------------------------------------------------ */
 
   function initMasthead() {
@@ -200,6 +257,11 @@
     var pointer = { x: -9999, y: -9999 };
     var running = true;
     var raf = null;
+    var brand = readBrand();
+
+    document.addEventListener('enhance:theme', function () {
+      brand = readBrand();
+    });
 
     function resize() {
       var rect = hero.getBoundingClientRect();
@@ -230,6 +292,7 @@
       ctx.clearRect(0, 0, width, height);
 
       var linkDist = 132;
+      var rgb = brand.join(', ');
       var i, j, a, b, dx, dy, dist;
 
       for (i = 0; i < nodes.length; i++) {
@@ -258,7 +321,7 @@
           dy = a.y - b.y;
           dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < linkDist) {
-            ctx.strokeStyle = 'rgba(0, 127, 255, ' + (0.16 * (1 - dist / linkDist)).toFixed(3) + ')';
+            ctx.strokeStyle = 'rgba(' + rgb + ', ' + (0.16 * (1 - dist / linkDist)).toFixed(3) + ')';
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -270,7 +333,7 @@
 
       for (i = 0; i < nodes.length; i++) {
         a = nodes[i];
-        ctx.fillStyle = 'rgba(0, 127, 255, 0.5)';
+        ctx.fillStyle = 'rgba(' + rgb + ', 0.5)';
         ctx.beginPath();
         ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
         ctx.fill();
@@ -382,6 +445,7 @@
 
   function boot() {
     initMasthead();
+    initTheme();
     initReveal();
     initTyped();
     initParticles();
