@@ -2,6 +2,8 @@
 main:
   - title: "GitHub"
     url: "https://github.com/zhoutaoq"
+  - title: "Gitee"
+    url: "https://gitee.com/zhoutaoq1029"
 
 #  - title: "Talks"
 #    url: /talks/
