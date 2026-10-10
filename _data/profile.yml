@@ -13,7 +13,7 @@ en:
   lead: 'Graduated from Shanghai University of Applied Technology. I focus on building products that are beneficial to society, commercially valuable, and user-friendly.'
   actions:
     - label: 'Get in Touch'
-      url: 'mailto:zhoutaoq1029@gmail.com'
+      url: 'mailto:zhoutaoq1029@126.com'
       icon: 'fas fa-envelope'
       variant: 'primary'
     - label: 'GitHub'
@@ -24,8 +24,8 @@ en:
     - icon: 'fas fa-map-marker-alt'
       text: 'Shanghai, China'
     - icon: 'fas fa-envelope'
-      text: 'zhoutaoq1029@gmail.com'
-      url: 'mailto:zhoutaoq1029@gmail.com'
+      text: 'zhoutaoq1029@126.com'
+      url: 'mailto:zhoutaoq1029@126.com'
 
   stats:
     - value: 5
@@ -103,12 +103,16 @@ en:
     items:
       - icon: 'fas fa-envelope'
         label: 'Email'
-        value: 'zhoutaoq1029@gmail.com'
-        url: 'mailto:zhoutaoq1029@gmail.com'
+        value: 'zhoutaoq1029@126.com'
+        url: 'mailto:zhoutaoq1029@126.com'
       - icon: 'fab fa-github'
         label: 'GitHub'
         value: '@zhoutaoq'
         url: 'https://github.com/zhoutaoq'
+      - icon_svg: 'gitee'
+        label: 'Gitee'
+        value: '@zhoutaoq1029'
+        url: 'https://gitee.com/zhoutaoq1029'
       - icon: 'fab fa-linkedin'
         label: 'LinkedIn'
         value: 'zhoutaoq'
@@ -122,7 +126,7 @@ zh:
   eyebrow: '软件开发工程师 · 上海'
   hello: '你好，我是'
   name: 'zhoutaoq'
-  typed_prefix: '我写'
+  typed_prefix: '我构建'
   typed:
     - '分布式服务'
     - 'Java 后端'
@@ -131,7 +135,7 @@ zh:
   lead: '我毕业于上海应用技术大学，目前从事软件开发工作。专注于开发对社会有益、具有商业价值且人性化的产品。'
   actions:
     - label: '联系我'
-      url: 'mailto:zhoutaoq1029@gmail.com'
+      url: 'mailto:zhoutaoq1029@126.com'
       icon: 'fas fa-envelope'
       variant: 'primary'
     - label: 'GitHub'
@@ -142,8 +146,8 @@ zh:
     - icon: 'fas fa-map-marker-alt'
       text: '中国 · 上海'
     - icon: 'fas fa-envelope'
-      text: 'zhoutaoq1029@gmail.com'
-      url: 'mailto:zhoutaoq1029@gmail.com'
+      text: 'zhoutaoq1029@126.com'
+      url: 'mailto:zhoutaoq1029@126.com'
 
   stats:
     - value: 5
@@ -221,12 +225,16 @@ zh:
     items:
       - icon: 'fas fa-envelope'
         label: '邮箱'
-        value: 'zhoutaoq1029@gmail.com'
-        url: 'mailto:zhoutaoq1029@gmail.com'
+        value: 'zhoutaoq1029@126.com'
+        url: 'mailto:zhoutaoq1029@126.com'
       - icon: 'fab fa-github'
         label: 'GitHub'
         value: '@zhoutaoq'
         url: 'https://github.com/zhoutaoq'
+      - icon_svg: 'gitee'
+        label: 'Gitee'
+        value: '@zhoutaoq1029'
+        url: 'https://gitee.com/zhoutaoq1029'
       - icon: 'fab fa-linkedin'
         label: 'LinkedIn'
         value: 'zhoutaoq'
