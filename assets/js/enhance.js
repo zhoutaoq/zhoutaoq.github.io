@@ -439,7 +439,16 @@
       if (!target) return;
 
       e.preventDefault();
+
+      // 目标卡片可能还停在入场动画的初始态（translateY 18px），
+      // scrollIntoView 会按偏移后的位置落点，差 18px。先让它直接落到终态。
+      var prevTransition = target.style.transition;
+      target.style.transition = 'none';
+      target.classList.add('is-in');
       target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      window.requestAnimationFrame(function () {
+        target.style.transition = prevTransition;
+      });
     });
   }
 

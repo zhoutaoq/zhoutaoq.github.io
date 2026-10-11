@@ -15,6 +15,11 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
+          {% if page.landing %}
+            {% for link in site.data.navigation.landing %}
+              <li class="masthead__menu-item"><a href="{{ link.url }}">{% if page.lang == 'zh' %}{{ link.zh }}{% else %}{{ link.en }}{% endif %}</a></li>
+            {% endfor %}
+          {% endif %}
           <li class="masthead__menu-item masthead__lang">
             {% if page.lang == 'zh' %}
               <a href="{{ base_path }}/">English</a>

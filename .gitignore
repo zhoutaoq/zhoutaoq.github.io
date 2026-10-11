@@ -1,8 +1,17 @@
 _site/
+.jekyll-cache/
+.sass-cache/
 .idea
+.workbuddy/
 
 Dockerfile
 start.bat
 Gemfile.lock
 .dockerignore
 
+# 临时产物：截图 / 日志 / 构建目录，一律不入库
+/*.png
+/*.jpg
+/*.log
+target/
+build/

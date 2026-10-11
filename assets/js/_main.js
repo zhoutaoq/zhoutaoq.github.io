@@ -58,7 +58,9 @@ $(document).ready(function(){
   });
 
   // init smooth scroll
-  $("a").smoothScroll({offset: -20});
+  // 页内锚点交给 enhance.js 的 initSmoothAnchors：它会按 scroll-margin-top 落点，
+  // 这里再挂一份会跟它抢滚动，最终落到 offset -20 处被吸顶导航挡住。
+  // $("a").smoothScroll({offset: -20});
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
