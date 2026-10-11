@@ -1,0 +1,27 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section id="projects" class="band">
+  <div class="band__inner">
+    <header class="sec__head" data-reveal>
+      <p class="sec__eyebrow">{{ t.projects.eyebrow }}</p>
+      <h2 class="sec__title">{{ t.projects.title }}</h2>
+      <p class="sec__lead">{{ t.projects.lead }}</p>
+    </header>
+
+    <div class="projects">
+      {% for p in t.projects.items %}
+        <article class="card project"{% if p.anchor %} id="{{ p.anchor }}"{% endif %} data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms" data-spotlight>
+          <span class="project__index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          <div class="project__body">
+            <h3 class="card__title">{{ p.name }}</h3>
+            <p class="project__org">{{ p.org }}</p>
+            <p class="card__text">{{ p.summary }}</p>
+            <ul class="tags">
+              {% for tag in p.tags %}<li class="tags__item">{{ tag }}</li>{% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

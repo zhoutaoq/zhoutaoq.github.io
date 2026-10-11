@@ -1002,6 +1002,309 @@ body,
   .contact__tile:hover .contact__value {
     color: var(--brand);
   }
+
+  /* 吸顶导航遮挡锚点：跳到分节或某个项目时留出顶栏高度 */
+  section[id],
+  .project[id] {
+    scroll-margin-top: 84px;
+  }
+
+  /* ------------------------------------------------------------------------
+     关于我
+     ------------------------------------------------------------------------ */
+
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr);
+    /* 正文段落较短时，与右侧档案卡垂直居中，避免下方留出大片空白 */
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about__p {
+    margin: 0 0 1.15rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--ink-2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .about__facts {
+    padding: 1.9rem 1.6rem;
+  }
+
+  .facts {
+    margin: 1.4rem 0 0;
+    padding: 0;
+  }
+
+  .facts__row {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .facts__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .facts__value {
+    margin: 0.25rem 0 0;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.62;
+    color: var(--ink);
+  }
+
+  /* ------------------------------------------------------------------------
+     工作经历时间轴
+     ------------------------------------------------------------------------ */
+
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* 三列：年份 / 轴线 / 卡片 */
+  .timeline__item {
+    display: grid;
+    grid-template-columns: 8.25rem 1.5rem minmax(0, 1fr);
+    align-items: start;
+    padding-bottom: 1.85rem;
+    list-style: none;
+
+    &:last-child {
+      padding-bottom: 0;
+
+      /* 最后一项没有下一段，线止于卡片底部 */
+      .timeline__rail::before {
+        bottom: 0.75rem;
+      }
+    }
+  }
+
+  .timeline__year {
+    grid-column: 1;
+    justify-self: end;
+    margin-top: 0.35rem;
+    padding: 0.28rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--brand-deep);
+    background: var(--brand-050);
+    border: 1px solid var(--brand-line);
+    border-radius: var(--pill);
+  }
+
+  /* 轴线：圆点 + 竖向连线 + 指向下一段的箭头 */
+  .timeline__rail {
+    grid-column: 2;
+    position: relative;
+    align-self: stretch;
+    min-height: 3.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.55rem;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: var(--card-bg);
+      box-shadow: inset 0 0 0 2px var(--brand);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.45rem;
+      bottom: -1.35rem;
+      left: 50%;
+      width: 2px;
+      transform: translateX(-50%);
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--brand-line-strong), var(--line));
+    }
+
+    i {
+      position: absolute;
+      bottom: -1.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.1rem 0;
+      font-size: 0.7rem;
+      line-height: 1;
+      color: var(--brand);
+      background: var(--surface);
+    }
+  }
+
+  .timeline__body {
+    grid-column: 3;
+    padding: 1.85rem 1.85rem 1.7rem;
+  }
+
+  /* 公司名是卡片里最大的一行，职位和部门合成一行紧跟在后面 */
+  .timeline__company {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .timeline__meta {
+    margin: 0.6rem 0 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ink-3);
+  }
+
+  /* 岗位下面只列项目名，点进去是对应公司官网 */
+  .timeline__projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1.15rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      list-style: none;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .timeline__proj {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    transition: color 0.25s var(--ease), background-color 0.25s var(--ease), border-color 0.25s var(--ease);
+
+    i {
+      font-size: 0.62rem;
+      color: var(--brand);
+      opacity: 0.72;
+    }
+
+    &:hover {
+      color: var(--brand);
+      background: var(--brand-050);
+      border-color: var(--brand-line-strong);
+
+      i {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* 指向下方「项目经历」的卡片：向下箭头，跟站外链接的箭头区分开 */
+  .timeline__proj--jump {
+    i {
+      font-size: 0.72rem;
+      opacity: 0.85;
+    }
+  }
+
+  .timeline__proj--plain {
+    cursor: default;
+  }
+
+  .timeline__link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--brand-line-strong);
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+
+    i {
+      margin-left: 0.35rem;
+      font-size: 0.66rem;
+      color: var(--brand);
+    }
+
+    &:hover {
+      color: var(--brand);
+      border-bottom-color: var(--brand);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     项目经历
+     ------------------------------------------------------------------------ */
+
+  .projects {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .project {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.7rem 1.85rem;
+  }
+
+  .project__index {
+    flex: 0 0 auto;
+    padding-top: 0.28rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--brand);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .project__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .project .card__title {
+    margin: 0;
+  }
+
+  .project__org {
+    margin: 0.45rem 0 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--ink-3);
+  }
+
+  /* 标签描边跟随卡片悬浮，三种卡片一致 */
+  .stack__card:hover .tags__item,
+  .timeline__body:hover .tags__item,
+  .project:hover .tags__item {
+    border-color: var(--brand-line-strong);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1120,6 +1423,10 @@ body,
     .contact {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .about {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 }
 
@@ -1145,6 +1452,44 @@ body,
     .hero__actions .pill {
       flex: 1 1 auto;
       justify-content: center;
+    }
+
+    /* 窄屏：年份换到卡片上方，轴线独占一列 */
+    .timeline__item {
+      grid-template-columns: 1.5rem minmax(0, 1fr);
+      column-gap: 0.85rem;
+      padding-bottom: 1.6rem;
+    }
+
+    .timeline__year {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: start;
+      margin: 0 0 0.6rem;
+    }
+
+    .timeline__rail {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+
+    .timeline__body {
+      grid-column: 2;
+      grid-row: 2;
+      padding: 1.5rem 1.35rem;
+    }
+
+    .timeline__company {
+      font-size: 1.125rem;
+    }
+
+    .about__facts {
+      padding: 1.5rem 1.35rem;
+    }
+
+    .project {
+      gap: 1rem;
+      padding: 1.5rem 1.35rem;
     }
   }
 }

@@ -3,20 +3,17 @@ main:
   - title: "GitHub"
     url: "https://github.com/zhoutaoq"
 
-#  - title: "Talks"
-#    url: /talks/
-#
-#  - title: "Teaching"
-#    url: /teaching/
-#
-#  - title: "Portfolio"
-#    url: /portfolio/
-#
-#  - title: "Blog Posts"
-#    url: /year-archive/
-#
-#  - title: "CV"
-#    url: /cv/
-#
-#  - title: "Guide"
-#    url: /markdown/
+# 落地页内的分节锚点，只在 page.landing 的页面上渲染（见 _includes/masthead.html）
+landing:
+  - zh: "经历"
+    en: "Experience"
+    url: "#experience"
+  - zh: "项目"
+    en: "Projects"
+    url: "#projects"
+  - zh: "技术栈"
+    en: "Stack"
+    url: "#stack"
+  - zh: "联系"
+    en: "Contact"
+    url: "#contact"

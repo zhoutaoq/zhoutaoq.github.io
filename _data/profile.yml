@@ -9,8 +9,8 @@ en:
     - 'distributed services'
     - 'Java backends'
     - 'data pipelines'
-    - 'developer tooling'
-  lead: 'Graduated from Shanghai University of Applied Technology. I focus on building products that are beneficial to society, commercially valuable, and user-friendly.'
+    - 'AI-assisted workflows'
+  lead: 'Five years of backend development, graduated from Shanghai University of Applied Technology in Electronic Information Engineering. I like taking messy business processes and turning them into services that still hold up after go-live — from investment-banking platforms to government case-management systems.'
   actions:
     - label: 'Get in Touch'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -27,6 +27,8 @@ en:
   chips:
     - icon: 'fas fa-map-marker-alt'
       text: 'Shanghai, China'
+    - icon: 'fas fa-graduation-cap'
+      text: 'Shanghai University of Applied Technology'
     - icon: 'fas fa-envelope'
       text: 'zhoutaoq1029@126.com'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -46,8 +48,94 @@ en:
       note: 'Automation scripts & REST APIs'
     - value: 4
       suffix: ''
-      label: 'Tech Domains'
-      note: 'Backend · Frontend · Python · DevOps'
+      label: 'Systems delivered'
+      note: 'Investment banking · justice · retail'
+
+  about:
+    eyebrow: 'About'
+    title: 'Engineering that survives delivery'
+    lead: 'From optoelectronics to IoT, then on to Java backend engineering.'
+    paragraphs:
+      - 'I started out in Optoelectronic Information Science and Engineering, then switched in my third year to Electronic Information Engineering, specialising in IoT. Web application development is what caught my interest, and Java / backend work is what I have been doing since graduating.'
+    facts:
+      - label: 'Education'
+        value: 'Shanghai University of Applied Technology'
+      - label: 'Major'
+        value: 'Electronic Information Engineering (IoT) · Bachelor'
+      - label: 'Experience'
+        value: '5+ years in software development'
+      - label: 'Location'
+        value: 'Shanghai, China'
+      - label: 'Direction'
+        value: 'Backend · Distributed services · AI-assisted development'
+
+  experience:
+    eyebrow: 'Experience'
+    title: 'Where I have worked'
+    lead: 'Most recent first.'
+    items:
+      - period: '2024 — Now'
+        org: 'Shenzhen Kingdom Technology Co., Ltd.'
+        org_url: 'https://szkingdom.com/'
+        role: 'Lead Development Engineer'
+        team: 'Shanghai R&D Department'
+        projects:
+          - name: 'Next-generation Investment Banking Platform'
+            url: '#project-kingdom-ib'
+        tags: ['Java', 'Spring Boot', 'Low-code', 'OceanBase', 'Huawei CCE', 'CI/CD']
+      - period: '2021 — 2024'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        org_url: 'https://homolo.com/'
+        role: 'Backend Development Engineer'
+        team: 'Technology Department'
+        projects:
+          - name: 'Shanghai People''s Mediation System'
+            url: '#project-mediation'
+          - name: 'Shanghai Judicial Administrative Approval System'
+            url: '#project-judicial-approval'
+        tags: ['Java', 'Spring Cloud', 'MyBatis', 'MySQL', 'Redis', 'Workflow']
+      - period: '2021'
+        org: 'Shanghai Pekon Digital Technology Co., Ltd.'
+        org_url: 'https://www.pekon.com/'
+        role: 'Backend Development Engineer'
+        team: 'New Retail'
+        projects:
+          - name: 'Beauty Brand Retail System'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+      - period: '2020'
+        org: 'Shanghai Firstbrave Information Technology Co., Ltd.'
+        org_url: 'https://www.firstbrave.com/'
+        role: 'Backend Development Intern'
+        team: 'Technology Department'
+        projects:
+          - name: 'Yiquan Copyright Monitoring Platform'
+        tags: ['Java', 'Spring', 'MySQL', 'Web Crawler']
+
+  projects:
+    eyebrow: 'Projects'
+    title: 'Things I have shipped'
+    lead: 'Four systems, grouped by employer from most recent.'
+    items:
+      - name: 'Next-generation Investment Banking Platform'
+        anchor: 'project-kingdom-ib'
+        org: 'Shenzhen Kingdom Technology Co., Ltd.'
+        summary: 'A digital platform covering the whole investment-banking workflow — underwriting, approval, ledgers and reports. In production at two mid-to-large securities firms.'
+        tags: ['Java', 'Spring', 'koca Low-code', 'OceanBase', 'Huawei CCE', 'CI/CD']
+      - name: 'Shanghai People''s Mediation System'
+        anchor: 'project-mediation'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        summary: 'Case and party management for city-wide mediation work, plus the reporting layer behind it.'
+        tags: ['Java', 'Spring Cloud', 'MySQL', 'Redis', 'Dashboard APIs']
+      - name: 'Shanghai Judicial Administrative Approval System'
+        anchor: 'project-judicial-approval'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        summary: 'Internal approval workflow for the Shanghai Justice Bureau, wired into the wider government service ecosystem.'
+        tags: ['Java', 'Workflow', 'SSO', 'E-signature', 'Alipay']
+      - name: 'Beauty Brand Retail System'
+        anchor: 'project-pekon-retail'
+        org: 'Shanghai Pekon Digital Technology Co., Ltd.'
+        summary: 'An all-round retail management platform for beauty brands — store POS, membership, inventory and ordering in one system.'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
 
   focus:
     eyebrow: 'What I focus on'
@@ -67,19 +155,27 @@ en:
   stack:
     eyebrow: 'Tech Stack'
     title: 'Tools I work with every day'
-    lead: 'Five years of hands-on Java and JavaScript, two years of Python, and a Linux-first workflow.'
+    lead: 'Five years of Java and JavaScript, two years of Python, a Linux-first workflow, and an AI-assisted toolchain on top.'
     groups:
       - icon: 'fas fa-server'
         title: 'Backend Development'
-        tags: ['Java', 'Spring', 'MySQL', 'Redis', 'Kafka', 'MyBatis']
+        tags: ['Java', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
         points:
           - '5+ years of Java development experience'
           - 'Java Web applications, SDK development and internal tooling'
-          - 'Extensive experience across the Spring ecosystem'
+          - 'Spring, Spring Boot and Spring Cloud — enough of the source read to extend it'
           - 'Stable, high-performance distributed services'
+      - icon: 'fas fa-database'
+        title: 'Data & Messaging'
+        tags: ['MySQL', 'SQL Server', 'OceanBase', 'Redis', 'MongoDB', 'RocketMQ', 'RabbitMQ', 'Elasticsearch']
+        points:
+          - 'Relational databases: MySQL, SQL Server and the domestic OceanBase'
+          - 'Locks, transactions and indexing, with the storage-engine details to reason about them'
+          - 'Redis and MongoDB — distributed locks, cache eviction, persistence'
+          - 'RocketMQ and RabbitMQ for async flows, Elasticsearch for large reporting workloads'
       - icon: 'fas fa-code'
         title: 'Frontend Development'
-        tags: ['JavaScript', 'Vue']
+        tags: ['JavaScript', 'Vue', 'jQuery', 'Element UI']
         points:
           - '5+ years of JavaScript experience'
           - 'Independent frontend development and bug fixing'
@@ -93,12 +189,20 @@ en:
           - 'RESTful API services'
       - icon: 'fas fa-cubes'
         title: 'DevOps & Infrastructure'
-        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'DevOps']
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
         points:
           - '5+ years of Linux experience'
           - 'Shell scripting for repetitive and scheduled work'
-          - 'Docker containerisation and Kubernetes orchestration'
-          - 'DevOps practices and release workflows'
+          - 'Docker containerisation and Kubernetes orchestration, including Huawei CCE'
+          - 'Building and releasing frontend and backend apps through GitLab CI/CD and GitHub Actions'
+      - icon: 'fas fa-robot'
+        title: 'AI-Assisted Engineering'
+        tags: ['Claude Code', 'Codex', 'Qoder', 'Trae', 'MCP', 'Skills', 'LangChain', 'Milvus']
+        points:
+          - 'AI coding tools in daily use: Claude Code, Codex, Qoder and Trae'
+          - 'Comfortable with the MCP protocol, and with packaging workflows into reusable Skills'
+          - 'Able to run the whole loop with AI — write, build, release'
+          - 'Grasp of AI agent fundamentals, the LangChain ecosystem, Milvus and embeddings'
 
   contact:
     eyebrow: 'Get in Touch'
@@ -135,8 +239,8 @@ zh:
     - '分布式服务'
     - 'Java 后端'
     - '数据管道'
-    - '研发工具'
-  lead: '我毕业于上海应用技术大学，目前从事软件开发工作。专注于开发对社会有益、具有商业价值且人性化的产品。'
+    - 'AI 辅助研发流程'
+  lead: '五年后端开发经验，毕业于上海应用技术大学电子信息工程专业。喜欢把繁琐的业务流程做成上线之后依然站得住的服务——从券商投行系统到政务案件管理，都完整交付过。'
   actions:
     - label: '联系我'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -153,6 +257,8 @@ zh:
   chips:
     - icon: 'fas fa-map-marker-alt'
       text: '中国 · 上海'
+    - icon: 'fas fa-graduation-cap'
+      text: '上海应用技术大学'
     - icon: 'fas fa-envelope'
       text: 'zhoutaoq1029@126.com'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -172,8 +278,94 @@ zh:
       note: '自动化脚本与 REST API'
     - value: 4
       suffix: ''
-      label: '个技术方向'
-      note: '后端 · 前端 · Python · 运维'
+      label: '个交付上线的系统'
+      note: '投行 · 司法 · 零售'
+
+  about:
+    eyebrow: '关于我'
+    title: '让系统在上线之后站得住'
+    lead: '从光电信息工程到物联网，再一路做到 Java 后端。'
+    paragraphs:
+      - '本科先读光电信息科学与工程专业，大三转入电子信息工程专业物联网方向。期间对 Web 应用开发产生兴趣，毕业之后一直从事 Java / 后端开发工作。'
+    facts:
+      - label: '教育背景'
+        value: '上海应用技术大学'
+      - label: '专业学历'
+        value: '电子信息工程（物联网方向）· 本科'
+      - label: '工作年限'
+        value: '5 年以上软件开发经验'
+      - label: '所在地'
+        value: '中国 · 上海'
+      - label: '技术方向'
+        value: '后端 · 分布式服务 · AI 辅助研发'
+
+  experience:
+    eyebrow: '工作经历'
+    title: '工作履历'
+    lead: '由近及远排列。'
+    items:
+      - period: '2024 至今'
+        org: '深圳市金证科技股份有限公司'
+        org_url: 'https://szkingdom.com/'
+        role: '主管开发工程师'
+        team: '上海研发部'
+        projects:
+          - name: '新一代投行综合业务数字化平台'
+            url: '#project-kingdom-ib'
+        tags: ['Java', 'Spring Boot', '低代码', 'OceanBase', '华为 CCE', 'CI/CD']
+      - period: '2021 — 2024'
+        org: '上海同道信息技术有限公司'
+        org_url: 'https://homolo.com/'
+        role: '后端开发工程师'
+        team: '技术部'
+        projects:
+          - name: '上海市人民调解系统'
+            url: '#project-mediation'
+          - name: '上海市司法行政审批系统'
+            url: '#project-judicial-approval'
+        tags: ['Java', 'Spring Cloud', 'MyBatis', 'MySQL', 'Redis', '工作流']
+      - period: '2021'
+        org: '上海秉坤数码科技有限公司'
+        org_url: 'https://www.pekon.com/'
+        role: '后端开发工程师'
+        team: '新零售'
+        projects:
+          - name: '美妆品牌零售系统'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+      - period: '2020'
+        org: '上海冠勇信息科技有限公司'
+        org_url: 'https://www.firstbrave.com/'
+        role: '服务端开发实习生'
+        team: '技术部'
+        projects:
+          - name: '易犬版权监测平台'
+        tags: ['Java', 'Spring', 'MySQL', '数据爬虫']
+
+  projects:
+    eyebrow: '项目经历'
+    title: '做过的东西'
+    lead: '四个系统，按公司由近及远排列。'
+    items:
+      - name: '新一代投行综合业务数字化平台'
+        anchor: 'project-kingdom-ib'
+        org: '深圳市金证科技股份有限公司'
+        summary: '覆盖投行承做、审批、台账与报表全流程的业务数字化平台，已投产落地两家中大型券商。'
+        tags: ['Java', 'Spring', 'koca 低代码', 'OceanBase', '华为 CCE', 'CI/CD']
+      - name: '上海市人民调解系统'
+        anchor: 'project-mediation'
+        org: '上海同道信息技术有限公司'
+        summary: '面向全市调解工作的案件与当事人管理，以及背后的数据报表层。'
+        tags: ['Java', 'Spring Cloud', 'MySQL', 'Redis', '大屏接口']
+      - name: '上海市司法行政审批系统'
+        anchor: 'project-judicial-approval'
+        org: '上海同道信息技术有限公司'
+        summary: '上海市司法局的内部审批工作流，并接入更广的政务服务生态。'
+        tags: ['Java', '工作流', '单点登录', '电子签章', '支付宝']
+      - name: '美妆品牌零售系统'
+        anchor: 'project-pekon-retail'
+        org: '上海秉坤数码科技有限公司'
+        summary: '面向美妆企业的全方位零售管理平台，覆盖门店 POS、会员、库存与订货协同。'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
 
   focus:
     eyebrow: '我在意什么'
@@ -193,19 +385,27 @@ zh:
   stack:
     eyebrow: '技术栈'
     title: '日常在用的工具'
-    lead: '五年 Java 与 JavaScript 实战，两年 Python，Linux 优先的工作流。'
+    lead: '五年 Java 与 JavaScript，两年 Python，Linux 优先的工作流，再加上一整套 AI 辅助研发链路。'
     groups:
       - icon: 'fas fa-server'
         title: '后端开发'
-        tags: ['Java', 'Spring', 'MySQL', 'Redis', 'Kafka', 'MyBatis']
+        tags: ['Java', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
         points:
           - '5 年以上 Java 开发经验'
           - '涵盖 Java Web 应用、SDK 开发、工具类开发'
-          - '熟练使用 Spring 生态系统'
+          - '熟练使用 Spring、Spring Boot、Spring Cloud，读过部分源码可做扩展'
           - '擅长构建稳定、高性能的分布式服务'
+      - icon: 'fas fa-database'
+        title: '数据库 & 中间件'
+        tags: ['MySQL', 'SQL Server', 'OceanBase', 'Redis', 'MongoDB', 'RocketMQ', 'RabbitMQ', 'Elasticsearch']
+        points:
+          - '关系型数据库：MySQL、SQL Server，以及信创数据库 OceanBase'
+          - '对数据库的锁、事务、索引有比较深入的理解'
+          - 'Redis、MongoDB；理解分布式锁、缓存淘汰策略与数据持久化'
+          - 'RocketMQ、RabbitMQ 处理异步流程，用 Elasticsearch 支撑大数据量报表'
       - icon: 'fas fa-code'
         title: '前端开发'
-        tags: ['JavaScript', 'Vue']
+        tags: ['JavaScript', 'Vue', 'jQuery', 'ElementUI']
         points:
           - '5 年以上 JavaScript 使用经验'
           - '能够独立完成前端功能开发和 Bug 修复'
@@ -219,12 +419,20 @@ zh:
           - '能够开发 RESTful API 接口'
       - icon: 'fas fa-cubes'
         title: 'DevOps & 运维'
-        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'DevOps']
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
         points:
           - '5 年以上 Linux 使用经验'
           - '擅长使用 Shell 脚本自动化处理重复性工作'
-          - '熟悉 Docker 容器化和 Kubernetes 编排'
-          - '了解 DevOps 流程和最佳实践'
+          - '熟悉 Docker 容器化和 Kubernetes 编排，用过华为 CCE 搭建集群环境'
+          - '用 GitLab CI/CD 与 GitHub Actions 完成前后端应用的构建与发布'
+      - icon: 'fas fa-robot'
+        title: 'AI 辅助研发'
+        tags: ['Claude Code', 'Codex', 'Qoder', 'Trae', 'MCP', 'Skills', 'LangChain', 'Milvus']
+        points:
+          - '日常使用 Claude Code、Codex、Qoder、Trae 等 AI 编程工具'
+          - '熟悉 MCP 原理和使用，能把工作流整理成可复用的 Skill'
+          - '能借助 AI 完成全栈开发：独立走通编码、构建、发布全流程'
+          - '了解 AI Agent 开发基础、LangChain 生态，以及 Milvus 与向量化原理'
 
   contact:
     eyebrow: '联系合作'
