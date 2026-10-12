@@ -4,7 +4,7 @@
   <div class="band__inner">
     <header class="sec__head" data-reveal>
       <p class="sec__eyebrow">{{ t.experience.eyebrow }}</p>
-      <h2 class="sec__title">{{ t.experience.title }}</h2>
+      {% if t.experience.title %}<h2 class="sec__title">{{ t.experience.title }}</h2>{% endif %}
       <p class="sec__lead">{{ t.experience.lead }}</p>
     </header>
 
@@ -12,7 +12,7 @@
       {% for job in t.experience.items %}
         <li class="timeline__item" data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms">
           <span class="timeline__year">{{ job.period }}</span>
-          <span class="timeline__rail" aria-hidden="true">{% unless forloop.last %}<i class="fas fa-arrow-down"></i>{% endunless %}</span>
+          <span class="timeline__rail" aria-hidden="true">{% unless forloop.last %}<i class="fas fa-arrow-up"></i>{% endunless %}</span>
           <div class="card timeline__body" data-spotlight>
             <h3 class="card__title timeline__company">
               {%- if job.org_url -%}

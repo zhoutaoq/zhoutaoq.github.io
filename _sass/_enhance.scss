@@ -1015,10 +1015,13 @@ body,
 
   .about {
     display: grid;
-    grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr);
-    /* 正文段落较短时，与右侧档案卡垂直居中，避免下方留出大片空白 */
-    align-items: center;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* 正文只有一段，并排放在档案卡旁边会上下空一大截，改成上下堆叠 */
+  .about__prose {
+    max-width: 46rem;
   }
 
   .about__p {
@@ -1033,26 +1036,22 @@ body,
   }
 
   .about__facts {
-    padding: 1.9rem 1.6rem;
+    padding: 1.5rem 1.6rem;
   }
 
+  /* 档案卡横过来：内容排成一行，窄屏自动折行 */
   .facts {
-    margin: 1.4rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+    column-gap: 1.75rem;
+    row-gap: 0.9rem;
+    margin: 1.15rem 0 0;
     padding: 0;
   }
 
   .facts__row {
-    padding: 0.85rem 0;
+    padding: 0 0 0.75rem;
     border-bottom: 1px solid var(--line);
-
-    &:first-child {
-      padding-top: 0;
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
   }
 
   .facts__label {

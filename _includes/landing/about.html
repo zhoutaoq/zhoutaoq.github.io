@@ -4,7 +4,7 @@
   <div class="band__inner">
     <header class="sec__head" data-reveal>
       <p class="sec__eyebrow">{{ t.about.eyebrow }}</p>
-      <h2 class="sec__title">{{ t.about.title }}</h2>
+      {% if t.about.title %}<h2 class="sec__title">{{ t.about.title }}</h2>{% endif %}
       <p class="sec__lead">{{ t.about.lead }}</p>
     </header>
 
