@@ -10,7 +10,7 @@ en:
     - 'Java backends'
     - 'data pipelines'
     - 'AI-assisted workflows'
-  lead: 'Five years of backend development, graduated from Shanghai University of Applied Technology in Electronic Information Engineering. I like taking messy business processes and turning them into services that still hold up after go-live — from investment-banking platforms to government case-management systems.'
+  lead: 'Five years of backend development, graduated from Shanghai University of Applied Technology in Electronic Information Engineering. I have delivered investment-banking, government and retail systems.'
   actions:
     - label: 'Get in Touch'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -70,7 +70,6 @@ en:
 
   experience:
     eyebrow: 'Experience'
-    lead: 'Most recent first.'
     items:
       - period: '2024 — Now'
         org: 'Shenzhen Kingdom Technology Co., Ltd.'
@@ -136,7 +135,6 @@ en:
   focus:
     eyebrow: 'What I focus on'
     title: 'Building valuable projects'
-    lead: 'Three things I keep in mind for every product I touch.'
     items:
       - icon: 'fas fa-globe'
         title: 'Beneficial to Society'
@@ -235,7 +233,7 @@ zh:
     - 'Java 后端'
     - '数据管道'
     - 'AI 辅助研发流程'
-  lead: '五年后端开发经验，毕业于上海应用技术大学电子信息工程专业。喜欢把繁琐的业务流程做成上线之后依然站得住的服务——从券商投行系统到政务案件管理，都完整交付过。'
+  lead: '五年后端开发经验，毕业于上海应用技术大学电子信息工程专业。交付过券商投行、政务、零售方向的系统。'
   actions:
     - label: '联系我'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -295,7 +293,6 @@ zh:
 
   experience:
     eyebrow: '工作经历'
-    lead: '由近及远排列。'
     items:
       - period: '2024 至今'
         org: '深圳市金证科技股份有限公司'
@@ -361,7 +358,6 @@ zh:
   focus:
     eyebrow: '我在意什么'
     title: '做有价值的项目'
-    lead: '每做一个产品，我都会想这三件事。'
     items:
       - icon: 'fas fa-globe'
         title: '对社会有益'

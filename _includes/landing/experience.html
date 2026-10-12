@@ -5,7 +5,7 @@
     <header class="sec__head" data-reveal>
       <p class="sec__eyebrow">{{ t.experience.eyebrow }}</p>
       {% if t.experience.title %}<h2 class="sec__title">{{ t.experience.title }}</h2>{% endif %}
-      <p class="sec__lead">{{ t.experience.lead }}</p>
+      {% if t.experience.lead %}<p class="sec__lead">{{ t.experience.lead }}</p>{% endif %}
     </header>
 
     <ol class="timeline">
