@@ -5,7 +5,7 @@
     <header class="sec__head" data-reveal>
       <p class="sec__eyebrow">{{ t.focus.eyebrow }}</p>
       <h2 class="sec__title">{{ t.focus.title }}</h2>
-      <p class="sec__lead">{{ t.focus.lead }}</p>
+      {% if t.focus.lead %}<p class="sec__lead">{{ t.focus.lead }}</p>{% endif %}
     </header>
 
     <ul class="feature">
