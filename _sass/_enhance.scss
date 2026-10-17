@@ -1584,7 +1584,7 @@ body.intro-open {
 .intro-modal__panel {
   position: relative;
   width: 92vw;
-  max-width: 1120px;
+  max-width: 1600px;
   background: #0b0f1f;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
@@ -1668,19 +1668,6 @@ body.intro-open {
   }
 }
 
-@media (max-height: 780px) {
-  .intro-modal__panel {
-    width: 78vw;
-    max-width: 900px;
-  }
-}
-
-@media (max-height: 600px) {
-  .intro-modal__panel {
-    width: 62vw;
-    max-width: 720px;
-  }
-}
 
 /* --------------------------------------------------------------------------
    降低动效偏好
