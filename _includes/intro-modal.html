@@ -1,0 +1,23 @@
+{% include base_path %}
+
+{% comment %} 介绍动画弹窗：点击顶栏的 Intro 按钮打开，iframe 里跑站点首页那支 19 秒动画（?embed=1 时不跳站） {% endcomment %}
+<div class="intro-modal" id="intro-modal" data-intro-modal hidden aria-hidden="true">
+  <div class="intro-modal__scrim" data-intro-close></div>
+
+  <div class="intro-modal__panel" role="dialog" aria-modal="true" aria-labelledby="intro-modal-title">
+    <div class="intro-modal__head">
+      <span class="intro-modal__title" id="intro-modal-title">
+        {% if page.lang == 'zh' %}个人介绍动画{% else %}Intro film{% endif %}
+      </span>
+      <span class="intro-modal__meta">19s</span>
+      <button class="intro-modal__close" type="button" data-intro-close
+              aria-label="{% if page.lang == 'zh' %}关闭{% else %}Close{% endif %}">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="intro-modal__frame">
+      <iframe data-intro-frame title="Intro film" data-src="{{ site.baseurl }}/?embed=1" allow="autoplay; fullscreen"></iframe>
+    </div>
+  </div>
+</div>

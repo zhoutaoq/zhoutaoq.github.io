@@ -205,18 +205,68 @@ body,
   }
 }
 
-/* 只显示当前主题对应的那颗图标；选择器要压过 font-awesome 的 .fas */
-.theme-toggle .theme-toggle__sun {
+/* 三态：跟随系统 / 暗 / 亮，只显示当前那一颗；选择器要压过 font-awesome 的 .fas */
+.theme-toggle .theme-toggle__auto,
+.theme-toggle .theme-toggle__sun,
+.theme-toggle .theme-toggle__moon {
   display: none;
 }
 
-[data-theme='dark'] .theme-toggle {
-  .theme-toggle__moon {
-    display: none;
+[data-theme-mode='auto'] .theme-toggle .theme-toggle__auto,
+[data-theme-mode='light'] .theme-toggle .theme-toggle__sun,
+[data-theme-mode='dark'] .theme-toggle .theme-toggle__moon,
+html:not([data-theme-mode]) .theme-toggle .theme-toggle__auto {
+  display: inline-block;
+}
+
+/* 顶栏「简介动画」按钮：点开弹窗播放首页那支动画 */
+.intro-launch {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 38px;
+  padding: 0 0.9rem;
+  color: var(--brand);
+  background: var(--brand-050);
+  border: 1px solid var(--brand-line-strong);
+  border-radius: var(--pill);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), background-color 0.2s var(--ease), border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+
+  i {
+    font-size: 0.7rem;
+    transition: transform 0.2s var(--ease);
   }
 
-  .theme-toggle__sun {
-    display: inline-block;
+  &:hover {
+    color: var(--on-brand);
+    background: var(--brand);
+    border-color: var(--brand);
+    box-shadow: var(--shadow-brand);
+
+    i {
+      transform: scale(1.15);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 560px) {
+  .intro-launch {
+    padding: 0 0.65rem;
+  }
+
+  .intro-launch__label {
+    display: none;
   }
 }
 
@@ -1490,6 +1540,145 @@ body,
       gap: 1rem;
       padding: 1.5rem 1.35rem;
     }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   介绍动画弹窗
+   -------------------------------------------------------------------------- */
+
+body.intro-open {
+  overflow: hidden;
+}
+
+.intro-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.intro-modal__scrim {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(6, 9, 22, 0.72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.22s var(--ease);
+}
+
+.intro-modal__panel {
+  position: relative;
+  width: 92vw;
+  max-width: 1120px;
+  background: #0b0f1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
+  transition: opacity 0.22s var(--ease), transform 0.26s var(--ease);
+}
+
+.intro-modal.is-open {
+  .intro-modal__scrim {
+    opacity: 1;
+  }
+
+  .intro-modal__panel {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.intro-modal__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intro-modal__title {
+  color: #f2f4f6;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.intro-modal__meta {
+  padding: 0.1rem 0.45rem;
+  color: rgba(242, 244, 246, 0.6);
+  font-size: 0.6875rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--pill);
+}
+
+.intro-modal__close {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: rgba(242, 244, 246, 0.7);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--pill);
+  cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+
+  &:hover {
+    color: #ffffff;
+    border-color: var(--brand);
+    background: rgba(77, 163, 255, 0.16);
+  }
+}
+
+/* 旧版 LibSass 编不了 min()/clamp()/aspect-ratio，这里全用 padding 撑比例 + 断点控制宽度 */
+.intro-modal__frame {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  background: #101735;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+@media (max-height: 780px) {
+  .intro-modal__panel {
+    width: 78vw;
+    max-width: 900px;
+  }
+}
+
+@media (max-height: 600px) {
+  .intro-modal__panel {
+    width: 62vw;
+    max-width: 720px;
   }
 }
 

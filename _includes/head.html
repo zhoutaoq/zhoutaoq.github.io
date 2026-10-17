@@ -12,11 +12,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  /* 主题在样式表之前贴上去，暗色用户首屏不会闪白 */
-  try {
-    if (window.localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-  } catch (e) {}
+  (function () {
+    var root = document.documentElement;
+    root.className = root.className.replace(/\bno-js\b/g, '') + ' js ';
+    /* 主题在样式表之前定下来：默认跟随浏览器设置，本地有手动覆盖时才用本地的，暗色首屏不闪白 */
+    var stored = null;
+    try { stored = window.localStorage.getItem('theme'); } catch (e) {}
+    var mode = stored === 'light' || stored === 'dark' ? stored : 'auto';
+    var dark = mode === 'auto'
+      ? !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      : mode === 'dark';
+    root.setAttribute('data-theme-mode', mode);
+    if (dark) root.setAttribute('data-theme', 'dark');
+  })();
 </script>
 
 <!-- For all browsers -->

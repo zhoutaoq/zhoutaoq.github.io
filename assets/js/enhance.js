@@ -14,14 +14,31 @@
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   }
 
-  /* 亮暗色切换 ------------------------------------------------------------ */
+  /* 亮暗色：默认跟随浏览器设置，允许手动覆盖 ----------------------------- */
 
   var THEME_KEY = 'theme';
+  var THEME_MODES = ['auto', 'dark', 'light'];
+  var THEME_LABEL = { auto: '跟随系统', dark: '暗色', light: '亮色' };
+  var darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-  function applyTheme(theme) {
+  function systemDark() {
+    return !!(darkQuery && darkQuery.matches);
+  }
+
+  function storedTheme() {
+    try {
+      var v = window.localStorage.getItem(THEME_KEY);
+      return v === 'light' || v === 'dark' ? v : 'auto';
+    } catch (e) {
+      return 'auto';
+    }
+  }
+
+  function applyTheme(mode) {
     var root = document.documentElement;
-    var dark = theme === 'dark';
+    var dark = mode === 'auto' ? systemDark() : mode === 'dark';
 
+    root.setAttribute('data-theme-mode', mode);
     if (dark) root.setAttribute('data-theme', 'dark');
     else root.removeAttribute('data-theme');
 
@@ -31,34 +48,91 @@
 
     $$('[data-theme-toggle]').forEach(function (btn) {
       btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      btn.setAttribute('aria-label', '主题：' + THEME_LABEL[mode]);
+      btn.setAttribute('title', '主题：' + THEME_LABEL[mode] + '（点击切换）');
     });
 
     document.dispatchEvent(new Event('enhance:theme'));
   }
 
-  function storedTheme() {
-    try {
-      return window.localStorage.getItem(THEME_KEY);
-    } catch (e) {
-      return null;
-    }
-  }
-
   function initTheme() {
     // 首屏已在 head 里贴过一遍，这里补上按钮状态和 meta
-    applyTheme(storedTheme() === 'dark' ? 'dark' : 'light');
+    applyTheme(storedTheme());
+
+    // 系统切换亮/暗时，处于「跟随系统」的页面实时跟着变
+    if (darkQuery) {
+      var onSystemChange = function () {
+        if (storedTheme() === 'auto') applyTheme('auto');
+      };
+      if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSystemChange);
+      else if (darkQuery.addListener) darkQuery.addListener(onSystemChange);
+    }
 
     var btn = $('[data-theme-toggle]');
     if (!btn) return;
 
     btn.addEventListener('click', function () {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
+      var mode = storedTheme();
+      var next = THEME_MODES[(THEME_MODES.indexOf(mode) + 1) % THEME_MODES.length];
       try {
-        window.localStorage.setItem(THEME_KEY, next);
+        if (next === 'auto') window.localStorage.removeItem(THEME_KEY);
+        else window.localStorage.setItem(THEME_KEY, next);
       } catch (e) {
         /* 隐私模式下写不进去，忽略 */
       }
+      applyTheme(next);
+    });
+  }
+
+  /* 介绍动画弹窗 ---------------------------------------------------------- */
+
+  function initIntroModal() {
+    var modal = $('[data-intro-modal]') || $('#intro-modal');
+    var openers = $$('[data-intro-open]');
+    if (!modal || !openers.length) return;
+
+    var frame = $('[data-intro-frame]', modal);
+    var closeBtn = $('[data-intro-close]', modal);
+    var lastFocus = null;
+    var closeTimer = null;
+
+    function open(e) {
+      if (e) e.preventDefault();
+      window.clearTimeout(closeTimer);
+      if (frame) {
+        var src = frame.getAttribute('src');
+        // 每次打开都从头播：关掉时会被置成 about:blank
+        if (!src || src === 'about:blank') frame.setAttribute('src', frame.getAttribute('data-src'));
+      }
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('intro-open');
+      window.requestAnimationFrame(function () {
+        modal.classList.add('is-open');
+      });
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function close() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('intro-open');
+      closeTimer = window.setTimeout(function () {
+        modal.hidden = true;
+        if (frame) frame.setAttribute('src', 'about:blank');
+      }, 220);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    openers.forEach(function (el) {
+      el.addEventListener('click', open);
+    });
+    $$('[data-intro-close]', modal).forEach(function (el) {
+      el.addEventListener('click', close);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!modal.hidden && e.key === 'Escape') close();
     });
   }
 
@@ -455,6 +529,7 @@
   function boot() {
     initMasthead();
     initTheme();
+    initIntroModal();
     initReveal();
     initTyped();
     initParticles();
