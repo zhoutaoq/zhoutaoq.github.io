@@ -6,7 +6,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"><img class="masthead__avatar" src="{{ base_path }}/images/profile.png" alt="" width="26" height="26">{{ site.brand | default: site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/en/"><img class="masthead__avatar" src="{{ base_path }}/images/profile.png" alt="" width="26" height="26">{{ site.brand | default: site.title }}</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -22,7 +22,7 @@
           {% endif %}
           <li class="masthead__menu-item masthead__lang">
             {% if page.lang == 'zh' %}
-              <a href="{{ base_path }}/">English</a>
+              <a href="{{ base_path }}/en/">English</a>
             {% else %}
               <a href="{{ base_path }}/cn/">中文</a>
             {% endif %}
@@ -30,7 +30,13 @@
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <button class="intro-launch" type="button" data-intro-open aria-haspopup="dialog" aria-controls="intro-modal"
+              title="{% if page.lang == 'zh' %}播放个人介绍动画{% else %}Play the 19-second intro{% endif %}">
+        <i class="fas fa-play" aria-hidden="true"></i>
+        <span class="intro-launch__label">{% if page.lang == 'zh' %}简介{% else %}Intro{% endif %}</span>
+      </button>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换亮色/暗色" title="切换亮色/暗色">
+        <i class="fas fa-adjust theme-toggle__auto" aria-hidden="true"></i>
         <i class="fas fa-moon theme-toggle__moon" aria-hidden="true"></i>
         <i class="fas fa-sun theme-toggle__sun" aria-hidden="true"></i>
       </button>

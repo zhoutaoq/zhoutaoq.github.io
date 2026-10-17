@@ -51,6 +51,19 @@ docker rm zhoutaoq-site
 - Update `_config.yml` for site settings
 - Add images to `images/` folder
 
+## Site map
+
+| URL | What it is | Where |
+| --- | --- | --- |
+| `/` | 19-second intro film, auto-forwards to `/en/` when done (static page, no Jekyll layout) | `index.html` |
+| `/en/` | English landing page | `_pages/about.html` |
+| `/cn/` | Chinese landing page | `_pages/cn.html` |
+| `/?embed=1` | Same film without the auto-forward, used inside the modal | `index.html` |
+
+- The `Intro` button in the masthead replays the film in a modal (`_includes/intro-modal.html`, iframe lazily points at `/?embed=1`).
+- Edit the film in `index.html`; landing-page copy lives in `_data/profile.yml`.
+- Light/dark follows the browser (`prefers-color-scheme`) by default; the toggle cycles auto → dark → light and stores the override in `localStorage.theme`.
+
 ## License
 
 MIT
