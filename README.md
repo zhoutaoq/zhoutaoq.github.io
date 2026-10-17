@@ -55,10 +55,10 @@ docker rm zhoutaoq-site
 
 | URL | What it is | Where |
 | --- | --- | --- |
-| `/` | 19-second intro film, auto-forwards to `/en/` when done (static page, no Jekyll layout) | `index.html` |
+| `/` | 13-second intro film; it freezes on the last frame (no redirect), the top-right `Enter the site →` pill goes to `/en/` (static page, no Jekyll layout) | `index.html` |
 | `/en/` | English landing page | `_pages/about.html` |
 | `/cn/` | Chinese landing page | `_pages/cn.html` |
-| `/?embed=1` | Same film without the auto-forward, used inside the modal | `index.html` |
+| `/?embed=1` | Same film, hidden `Enter the site` pill, used inside the modal iframe | `index.html` |
 
 - The `Intro` button in the masthead replays the film in a modal (`_includes/intro-modal.html`, iframe lazily points at `/?embed=1`).
 - Edit the film in `index.html`; landing-page copy lives in `_data/profile.yml`.
