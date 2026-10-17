@@ -74,35 +74,36 @@ h2{font-size:3.8cqw;margin:0 0 2.4cqw;font-weight:700;letter-spacing:-.01em;line
 .chip svg{width:1.7cqw;height:1.7cqw;margin-right:.6cqw}
 .end h2{font-size:6.4cqw}.vals{display:flex;gap:2cqw;font-size:2cqw;color:var(--sm);margin-bottom:3cqw}
 .ct{font-size:2.2cqw;line-height:1.7}.ct b{color:var(--ac);font-weight:600}
-#ctl{position:absolute;left:0;right:0;bottom:0;z-index:6;display:flex;gap:.8cqw;align-items:center;padding:.9cqw 2cqw;font-size:1.05cqw;color:rgba(232,235,245,.72);background:linear-gradient(to top,rgba(6,9,22,.9),rgba(6,9,22,.55) 58%,rgba(6,9,22,0));opacity:0;transition:opacity .25s}
+#ctl{position:absolute;left:0;right:0;bottom:0;z-index:6;display:flex;gap:.6cqw;align-items:center;justify-content:center;padding:2.3cqw 0 1.15cqw;font-size:.75cqw;color:rgba(232,235,245,.52);background:linear-gradient(to top,rgba(6,9,22,.7),rgba(6,9,22,.18) 62%,rgba(6,9,22,0));opacity:0;transition:opacity .25s}
 #st:hover #ctl,#st:focus-within #ctl,#st.paused #ctl{opacity:1}
-#pg{flex:1;display:flex;gap:.4cqw;cursor:pointer;touch-action:none;user-select:none}
-.sg{min-width:0}.tr{height:.5cqw;min-height:3px;background:rgba(255,255,255,.2);border-radius:2px;overflow:hidden}.fill{height:100%;width:0;background:var(--ac)}
-.sg span{display:block;font-size:.85cqw;margin-top:.4cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sg:hover span{color:#fff}
-#tm{min-width:6cqw;text-align:right;font-variant-numeric:tabular-nums}
-#ctl button{font:inherit;font-size:1.05cqw;color:rgba(232,235,245,.82);background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:.45cqw 1.1cqw;cursor:pointer;white-space:nowrap;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
-#ctl button:hover{color:#fff;border-color:var(--ac);background:rgba(124,196,255,.14)}
-/* 右上角常驻进站入口：片尾高亮，别只靠 hover 才能离开 */
-.enter{position:absolute;right:2cqw;top:2cqw;z-index:7;display:inline-flex;align-items:center;gap:.5cqw;padding:.65cqw 1.2cqw;border:1px solid rgba(255,255,255,.22);border-radius:99px;background:rgba(6,9,22,.42);color:rgba(232,235,245,.9);font-size:1.05cqw;text-decoration:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:color .2s,border-color .2s,background .2s}
-.enter:hover{color:#fff;border-color:var(--ac);background:rgba(124,196,255,.2)}
-body.embed .enter{display:none}
-#st.ended .enter{color:#0b1024;background:var(--ac);border-color:var(--ac);font-weight:700}
+#pg{width:28cqw;max-width:430px;display:flex;gap:.3cqw;cursor:pointer;touch-action:none;user-select:none}
+.sg{min-width:0}.tr{height:3px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:var(--ac);border-radius:99px}
+.sg span{display:none}
+#tm{min-width:3.2cqw;text-align:right;font-variant-numeric:tabular-nums}
+/* 常驻进站入口：水平居中贴底，播放时低调、片尾点亮 */
+.enterbar{position:absolute;left:0;right:0;bottom:4.6cqw;z-index:7;display:flex;justify-content:center;pointer-events:none}
+.enter{pointer-events:none;display:inline-flex;align-items:center;gap:.55cqw;padding:.72cqw 1.55cqw;border:1px solid rgba(124,196,255,.3);border-radius:99px;background:rgba(8,12,26,.46);color:rgba(232,235,245,.9);font-size:1.05cqw;font-weight:600;letter-spacing:.01em;text-decoration:none;opacity:0;transform:translateY(10px);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .45s cubic-bezier(.22,.7,.25,1),transform .45s cubic-bezier(.22,.7,.25,1),color .22s,background .22s,border-color .22s,box-shadow .3s}
+.enter b{font-weight:700;transition:transform .22s}
+.enter:hover{color:#fff;border-color:var(--ac);background:rgba(124,196,255,.16);box-shadow:0 8px 26px rgba(0,0,0,.38)}
+.enter:hover b{transform:translateX(3px)}
+body.embed .enterbar{display:none}
+#st.ended .enter{pointer-events:auto;opacity:1;transform:none;color:#0b1024;background:var(--ac);border-color:var(--ac);box-shadow:0 10px 34px rgba(124,196,255,.34)}
 #st.ended #ctl{opacity:1}
 /* 小屏上 cqw 已经太小，控制条与入口改用固定字号，保证点得到 */
 @media (max-width:700px){
-#ctl{padding:9px 10px;gap:6px;font-size:11px}
-#ctl button{font-size:11px;padding:4px 9px}
-.sg span{font-size:9px;margin-top:3px}
-#tm{min-width:52px;font-size:10px}
-.tr{height:4px;min-height:0}
-.enter{top:10px;right:10px;padding:7px 13px;font-size:12px}
+#ctl{padding:16px 0 9px;gap:5px;font-size:9px}
+#pg{width:58vw;max-width:210px;gap:3px}
+#tm{min-width:32px;font-size:9px}
+.tr{height:3px}
+.enterbar{bottom:42px}
+.enter{padding:7px 15px;font-size:12px;gap:5px}
 }
 .ns{position:fixed;inset:0;display:grid;place-items:center;padding:24px;background:var(--s0);color:var(--sf);font-size:16px;text-align:center}
 .ns a{color:var(--ac)}
 </style></head><body>
 <noscript><div class="ns">This intro needs JavaScript. <a href="en/">Enter the site →</a></div></noscript>
 <div id="st">
-<a class="enter" id="enter" href="en/">Enter the site <b>→</b></a>
+<div class="enterbar"><a class="enter" id="enter" href="en/">Enter the site <b>→</b></a></div>
 <canvas id="cv"></canvas>
 <section class="sc">
  <div class="hi a" style="--d:.2s">Software Developer in Shanghai, China</div>
@@ -116,7 +117,7 @@ body.embed .enter{display:none}
 <section class="sc end"><h2 class="a">Let’s build something</h2>
  <div class="vals a" style="--d:.25s"><span>Beneficial to society</span><span>Commercially valuable</span><span>Pleasant to use</span></div>
  <div class="ct a" style="--d:.5s">Email <b>zhoutaoq1029@126.com</b><br>GitHub <b>github.com/zhoutaoq</b></div></section>
-<div id="ctl"><button id="pp" type="button">Pause</button><button id="rp" type="button">Replay</button><div id="pg" title="Click or drag to jump"></div><span id="tm">0 / 13s</span></div>
+<div id="ctl"><div id="pg" title="Click or drag to jump"></div><span id="tm">0 / 13s</span></div>
 </div>
 <script>
 const T=13,S=[[0,2.5],[2.5,6.5],[6.5,9.5],[9.5,11.5],[11.5,13]],L=['Intro','Career and projects','Architecture','Toolbox','Contact'];
@@ -161,21 +162,21 @@ const idx=()=>{const i=S.findIndex(s=>t>=s[0]&&t<s[1]);return i<0?0:i};
 function show(i){if(i===cur)return;if(cur>=0){const o=sc[cur];o.classList.remove('on');o.classList.add('out');setTimeout(()=>o.classList.remove('out'),600)}cur=i;sc[i].classList.add('on')}
 function seek(x){t=Math.max(0,Math.min(T-.01,x));const i=idx();st.classList.add('nt');sc.forEach(e=>e.classList.remove('on','out'));void st.offsetWidth;cur=i;sc[i].classList.add('on');void st.offsetWidth;
  sc[i].getAnimations({subtree:true}).forEach(a=>{try{a.currentTime=(t-S[i][0])*1000}catch(e){}});requestAnimationFrame(()=>st.classList.remove('nt'))}
-function reset(){done=false;st.classList.remove('ended');sc.forEach(e=>e.classList.remove('on','out'));void st.offsetWidth;cur=-1;t=0;playing=true;pp.textContent='Pause';st.classList.remove('paused');document.querySelectorAll('svg').forEach(s=>s.unpauseAnimations())}
+function reset(){done=false;st.classList.remove('ended');sc.forEach(e=>e.classList.remove('on','out'));void st.offsetWidth;cur=-1;t=0;playing=true;st.classList.remove('paused');document.querySelectorAll('svg').forEach(s=>s.unpauseAnimations())}
 /* 放完就停在最后一帧，不跳站；控制条和进站入口常显 */
-function finish(){if(done)return;done=true;t=T-.01;playing=false;pp.textContent='Play';st.classList.add('ended');
+function finish(){if(done)return;done=true;t=T-.01;playing=false;st.classList.add('ended');
  if(EMBED)try{parent.postMessage({type:'intro:done'},'*')}catch(e){}}
 function tick(now){const dt=Math.min((now-last)/1000,.1);last=now;
  if(playing&&!drag){t+=dt;if(t>=T)finish()}
  show(idx());
  fills.forEach((f,i)=>f.style.width=(100*Math.max(0,Math.min(1,(t-S[i][0])/(S[i][1]-S[i][0]))))+'%');
  tm.textContent=t.toFixed(1)+' / '+T+'s';net();requestAnimationFrame(tick)}
-function tog(){if(done){reset();return}playing=!playing;pp.textContent=playing?'Pause':'Play';st.classList.toggle('paused',!playing);document.querySelectorAll('svg').forEach(s=>playing?s.unpauseAnimations():s.pauseAnimations())}
+function tog(){if(done){reset();return}playing=!playing;st.classList.toggle('paused',!playing);document.querySelectorAll('svg').forEach(s=>playing?s.unpauseAnimations():s.pauseAnimations())}
 const at=e=>{const r=pg.getBoundingClientRect();return Math.max(0,Math.min(1,(e.clientX-r.left)/r.width))*T};
 pg.onpointerdown=e=>{drag=true;pg.setPointerCapture(e.pointerId);seek(at(e))};
 pg.onpointermove=e=>{if(drag)seek(at(e))};
 pg.onpointerup=pg.onpointercancel=()=>{drag=false};
-pp.onclick=tog;st.onclick=tog;rp.onclick=reset;
+st.onclick=tog;
 document.getElementById('ctl').onclick=e=>e.stopPropagation();
 document.getElementById('enter').onclick=e=>e.stopPropagation();
 addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();tog()}else if(e.code==='ArrowRight')seek(t+2);else if(e.code==='ArrowLeft')seek(t-2)});

@@ -95,14 +95,26 @@
     var closeBtn = $('[data-intro-close]', modal);
     var lastFocus = null;
     var closeTimer = null;
+    var panel = $('.intro-modal__panel', modal);
+
+    /* 弹窗按视口算尺寸：宽度占 70%，同时不超过视口高度的 80%（头部约 44px） */
+    function fitPanel() {
+      if (!panel) return;
+      var vw = window.innerWidth;
+      var vh = window.innerHeight;
+      var width = vw < 760 ? vw * 0.94 : Math.min(vw * 0.7, (vh * 0.8 - 44) * 16 / 9);
+      width = Math.min(width, 1600);
+      panel.style.width = Math.round(width) + 'px';
+    }
 
     function open(e) {
       if (e) e.preventDefault();
       window.clearTimeout(closeTimer);
+      fitPanel();
       if (frame) {
-        var src = frame.getAttribute('src');
-        // 每次打开都从头播：关掉时会被置成 about:blank
-        if (!src || src === 'about:blank') frame.setAttribute('src', frame.getAttribute('data-src'));
+        // 带上时间戳，保证每次打开都拿到最新的片子（也顺带绕开 HTML 的 10 分钟缓存）
+        var base = frame.getAttribute('data-src');
+        frame.setAttribute('src', base + (base.indexOf('?') > -1 ? '&' : '?') + '_=' + Date.now());
       }
       lastFocus = document.activeElement;
       modal.hidden = false;
@@ -124,6 +136,10 @@
       }, 220);
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
+
+    window.addEventListener('resize', function () {
+      if (!modal.hidden) fitPanel();
+    }, { passive: true });
 
     openers.forEach(function (el) {
       el.addEventListener('click', open);
