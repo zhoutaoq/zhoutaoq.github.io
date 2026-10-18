@@ -1,0 +1,17 @@
+{% assign rel = site.data.release %}
+{% if rel %}
+<div class="page__footer-meta" data-page-stats data-release="{{ rel.version }}">
+  <span class="page__footer-meta__row">
+    <span class="page__footer-meta__k">{% if page.lang == 'zh' %}今日访问{% else %}Views today{% endif %}</span>
+    <b class="page__footer-meta__v" data-pv="day">&mdash;</b>
+  </span>
+  <span class="page__footer-meta__row">
+    <span class="page__footer-meta__k">{% if page.lang == 'zh' %}上次发布{% else %}Last release{% endif %}</span>
+    <span class="page__footer-meta__v">{{ rel.at }}</span>
+  </span>
+  <span class="page__footer-meta__row">
+    <span class="page__footer-meta__k">{% if page.lang == 'zh' %}自发布以来{% else %}Views since release{% endif %}</span>
+    <b class="page__footer-meta__v" data-pv="release">&mdash;</b>
+  </span>
+</div>
+{% endif %}
