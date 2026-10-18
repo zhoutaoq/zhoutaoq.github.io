@@ -60,9 +60,11 @@ en:
     lead: 'From optoelectronics to IoT, then on to full-stack engineering, mostly on the server side.'
     paragraphs:
       - 'I started out in Optoelectronic Information Science and Engineering, then switched in my third year to Electronic Information Engineering, specialising in IoT. Web application development is what caught my interest, and server-side work is what I have been doing since graduating.'
+    school:
+      name: 'Shanghai University of Applied Technology'
+      note: 'Official site · sit.edu.cn'
+      url: 'https://www.sit.edu.cn/'
     facts:
-      - label: 'Education'
-        value: 'Shanghai University of Applied Technology'
       - label: 'Major'
         value: 'Electronic Information Engineering (IoT) · Bachelor'
       - label: 'Experience'
@@ -287,9 +289,11 @@ zh:
     lead: '从光电信息工程到物联网，再一路成长为全栈程序员，主要从事服务端开发。'
     paragraphs:
       - '本科先读光电信息科学与工程专业，大三转入电子信息工程专业物联网方向。期间对 Web 应用开发产生兴趣，毕业之后主要从事服务端开发工作。'
+    school:
+      name: '上海应用技术大学'
+      note: '学校官网 · sit.edu.cn'
+      url: 'https://www.sit.edu.cn/'
     facts:
-      - label: '教育背景'
-        value: '上海应用技术大学'
       - label: '专业学历'
         value: '电子信息工程（物联网方向）· 本科'
       - label: '工作年限'

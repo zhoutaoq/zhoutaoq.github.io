@@ -13,6 +13,17 @@
         {% for p in t.about.paragraphs %}
           <p class="about__p">{{ p }}</p>
         {% endfor %}
+
+        {% if t.about.school %}
+          <a class="about__school" href="{{ t.about.school.url }}" target="_blank" rel="noopener">
+            <span class="about__school-logo" role="img" aria-label="{{ t.about.school.name }}"></span>
+            <span class="about__school-text">
+              <span class="about__school-name">{{ t.about.school.name }}</span>
+              <span class="about__school-note">{{ t.about.school.note }}</span>
+            </span>
+            <i class="fas fa-external-link-alt about__school-go" aria-hidden="true"></i>
+          </a>
+        {% endif %}
       </div>
 
       <aside class="card about__facts" data-reveal style="--d:80ms" data-spotlight>

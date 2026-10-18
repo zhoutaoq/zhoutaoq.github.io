@@ -542,6 +542,51 @@
     });
   }
 
+  /* 页脚右下角：当日访问量 / 上次发布 / 自发布以来访问量 ------------------ */
+
+  function initPageStats() {
+    var box = $('[data-page-stats]');
+    if (!box) return;
+
+    var NS = 'zhoutaoq-pv';
+    var API = 'https://abacus.jasoncameron.dev/hit/';
+    var release = box.getAttribute('data-release') || '';
+    var now = new Date();
+    var pad = function (n) {
+      return (n < 10 ? '0' : '') + n;
+    };
+    var dayKey = 'day-' + now.getFullYear() + pad(now.getMonth() + 1) + pad(now.getDate());
+
+    function fill(name, value) {
+      var el = box.querySelector('[data-pv="' + name + '"]');
+      if (el && typeof value === 'number') el.textContent = value.toLocaleString('en-US');
+    }
+
+    function hit(key) {
+      if (!key) return Promise.resolve(null);
+      return fetch(API + NS + '/' + encodeURIComponent(key), { cache: 'no-store' })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (json) {
+          return json && typeof json.value === 'number' ? json.value : null;
+        })
+        .catch(function () {
+          return null;
+        });
+    }
+
+    hit(dayKey).then(function (value) {
+      fill('day', value);
+    });
+
+    if (release) {
+      hit('v-' + release).then(function (value) {
+        fill('release', value);
+      });
+    }
+  }
+
   function boot() {
     initMasthead();
     initTheme();
@@ -552,6 +597,7 @@
     initSpotlight();
     initTilt();
     initSmoothAnchors();
+    initPageStats();
   }
 
   if (document.readyState === 'loading') {
