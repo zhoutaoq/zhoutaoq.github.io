@@ -1,0 +1,455 @@
+# 首页/中文页的内容源，按语言分两组
+# 改文案只动这里，不动页面模板
+en:
+  eyebrow: 'Software Developer · Shanghai, China'
+  hello: "Hi, I'm"
+  name: 'zhoutaoq'
+  typed_prefix: 'I build'
+  typed:
+    - 'distributed services'
+    - 'server-side applications'
+    - 'data pipelines'
+    - 'AI coding workflows'
+  lead: 'Six years of full-stack development, mostly on the server side. Graduated from Shanghai University of Applied Technology in Electronic Information Engineering, and have contributed to investment-banking, government and retail systems.'
+  actions:
+    - label: 'Get in Touch'
+      url: 'mailto:zhoutaoq1029@126.com'
+      icon: 'fas fa-envelope'
+      variant: 'primary'
+    - label: 'GitHub'
+      url: 'https://github.com/zhoutaoq'
+      icon: 'fab fa-github'
+      variant: 'ghost'
+    - label: 'Gitee'
+      url: 'https://gitee.com/zhoutaoq1029'
+      icon_svg: 'gitee'
+      variant: 'ghost'
+  chips:
+    - icon: 'fas fa-map-marker-alt'
+      text: 'Shanghai, China'
+    - icon: 'fas fa-graduation-cap'
+      text: 'Shanghai University of Applied Technology'
+    - icon: 'fas fa-envelope'
+      text: 'zhoutaoq1029@126.com'
+      url: 'mailto:zhoutaoq1029@126.com'
+
+  stats:
+    - value: 7
+      suffix: '+'
+      label: 'Years with Java'
+      note: 'Backend & distributed services'
+    - value: 7
+      suffix: '+'
+      label: 'Years with JavaScript'
+      note: 'Frontend development & debugging'
+    - value: 6
+      suffix: '+'
+      label: 'Years with Python'
+      note: 'Automation scripts & REST APIs'
+    - value: 3
+      suffix: '+'
+      label: 'Years with Go'
+      note: 'Services & internal tooling'
+    - value: 10
+      suffix: '+'
+      label: 'Systems in production'
+      note: 'Investment banking · justice · retail'
+
+  about:
+    eyebrow: 'About'
+    lead: 'From optoelectronics to IoT, then on to full-stack engineering, mostly on the server side.'
+    paragraphs:
+      - 'I started out in Optoelectronic Information Science and Engineering, then switched in my third year to Electronic Information Engineering, specialising in IoT. Web application development is what caught my interest, and server-side work is what I have been doing since graduating.'
+    facts:
+      - label: 'Education'
+        value: 'Shanghai University of Applied Technology'
+      - label: 'Major'
+        value: 'Electronic Information Engineering (IoT) · Bachelor'
+      - label: 'Experience'
+        value: '6+ years in software development'
+      - label: 'Location'
+        value: 'Shanghai, China'
+      - label: 'Direction'
+        value: 'Server-side · Distributed services · AI Coding'
+
+  experience:
+    eyebrow: 'Experience'
+    items:
+      - period: '2024 — Now'
+        org: 'Shenzhen Kingdom Technology Co., Ltd.'
+        org_url: 'https://szkingdom.com/'
+        role: 'Lead Development Engineer'
+        team: 'Shanghai R&D Department'
+        projects:
+          - name: 'Next-generation Investment Banking Platform'
+            url: '#project-kingdom-ib'
+        tags: ['Java', 'Spring Boot', 'Low-code', 'OceanBase', 'Huawei CCE', 'CI/CD']
+      - period: '2021 — 2024'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        org_url: 'https://homolo.com/'
+        role: 'Backend Development Engineer'
+        team: 'Technology Department'
+        projects:
+          - name: 'Shanghai People''s Mediation System'
+            url: '#project-mediation'
+          - name: 'Shanghai Judicial Administrative Approval System'
+            url: '#project-judicial-approval'
+        tags: ['Java', 'Spring Cloud', 'MyBatis', 'MySQL', 'Redis', 'Workflow']
+      - period: '2021'
+        org: 'Shanghai Pekon Digital Technology Co., Ltd.'
+        org_url: 'https://www.pekon.com/'
+        role: 'Backend Development Engineer'
+        team: 'New Retail'
+        projects:
+          - name: 'Beauty Brand Retail System'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+      - period: '2020'
+        org: 'Shanghai Firstbrave Information Technology Co., Ltd.'
+        org_url: 'https://www.firstbrave.com/'
+        role: 'Backend Development Intern'
+        team: 'Technology Department'
+        projects:
+          - name: 'Yiquan Copyright Monitoring Platform'
+        tags: ['Python', 'Flask', 'Java', 'Spring', 'MySQL', 'Web Crawler']
+
+  projects:
+    eyebrow: 'Projects'
+    items:
+      - name: 'Next-generation Investment Banking Platform'
+        anchor: 'project-kingdom-ib'
+        org: 'Shenzhen Kingdom Technology Co., Ltd.'
+        summary: 'A digital platform covering the whole investment-banking workflow — underwriting, approval, ledgers and reports. In production at two mid-to-large securities firms.'
+        tags: ['Java', 'Spring', 'koca Low-code', 'OceanBase', 'Huawei CCE', 'CI/CD']
+      - name: 'Shanghai People''s Mediation System'
+        anchor: 'project-mediation'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        summary: 'Case and party management for city-wide mediation work, plus the reporting layer behind it.'
+        tags: ['Java', 'Spring Cloud', 'MySQL', 'Redis', 'Dashboard APIs']
+      - name: 'Shanghai Judicial Administrative Approval System'
+        anchor: 'project-judicial-approval'
+        org: 'Shanghai Tongdao Information Technology Co., Ltd.'
+        summary: 'Internal approval workflow for the Shanghai Justice Bureau, wired into the wider government service ecosystem.'
+        tags: ['Java', 'Workflow', 'SSO', 'E-signature', 'Alipay']
+      - name: 'Beauty Brand Retail System'
+        anchor: 'project-pekon-retail'
+        org: 'Shanghai Pekon Digital Technology Co., Ltd.'
+        summary: 'An all-round retail management platform for beauty brands — store POS, membership, inventory and ordering in one system.'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+
+  focus:
+    eyebrow: 'What I focus on'
+    title: 'Building valuable projects'
+    items:
+      - icon: 'fas fa-globe'
+        title: 'Beneficial to Society'
+        text: 'Build things that are genuinely useful to real people, not just demos that look good in a slide deck.'
+      - icon: 'fas fa-chart-line'
+        title: 'Commercially Valuable'
+        text: 'Design services that stay stable under load, perform well, and earn their keep in production.'
+      - icon: 'fas fa-heart'
+        title: 'Pleasant to Use'
+        text: 'Clean APIs and interfaces that are easy to pick up, hard to misuse, and calm to maintain.'
+
+  stack:
+    eyebrow: 'Tech Stack'
+    lead: 'Seven years across Java, JavaScript and Python, three with Go, a Linux-first workflow, and an AI coding toolchain on top.'
+    groups:
+      - icon: 'fas fa-server'
+        title: 'Backend Development'
+        tags: ['Java', 'Go', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
+        points:
+          - '7+ years of Java development experience'
+          - '3+ years of Go development experience'
+          - 'Java Web applications, SDK development and internal tooling'
+          - 'Spring, Spring Boot and Spring Cloud — enough of the source read to extend it'
+          - 'Stable, high-performance distributed services'
+      - icon: 'fas fa-database'
+        title: 'Data & Messaging'
+        tags: ['MySQL', 'SQL Server', 'OceanBase', 'Redis', 'MongoDB', 'RocketMQ', 'RabbitMQ', 'Elasticsearch']
+        points:
+          - 'Relational databases: MySQL, SQL Server and the domestic OceanBase'
+          - 'Locks, transactions and indexing, with the storage-engine details to reason about them'
+          - 'Redis and MongoDB — distributed locks, cache eviction, persistence'
+          - 'RocketMQ and RabbitMQ for async flows, Elasticsearch for large reporting workloads'
+      - icon: 'fas fa-code'
+        title: 'Frontend Development'
+        tags: ['JavaScript', 'Vue', 'jQuery', 'Element UI']
+        points:
+          - '7+ years of JavaScript experience'
+          - 'Independent frontend development and bug fixing'
+          - 'Personal projects and small applications with Vue'
+      - icon: 'fab fa-python'
+        title: 'Python Development'
+        tags: ['Python', 'Flask', 'FastAPI']
+        points:
+          - '6+ years of Python development experience'
+          - 'Automation scripts and internal tools'
+          - 'RESTful API services with FastAPI and Flask'
+      - icon: 'fas fa-cubes'
+        title: 'DevOps & Infrastructure'
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
+        points:
+          - '6+ years of Linux experience'
+          - 'Shell scripting for repetitive and scheduled work'
+          - 'Docker containerisation and Kubernetes orchestration, including Huawei CCE'
+          - 'Building and releasing frontend and backend apps through GitLab CI/CD and GitHub Actions'
+      - icon: 'fas fa-robot'
+        title: 'AI Coding'
+        tags: ['Claude Code', 'Codex', 'Cursor', 'Opus', 'GPT', 'DeepSeek', 'GLM']
+        points:
+          - 'AI coding tools in daily use: Claude Code, Codex and Cursor'
+          - 'Frontier models such as Opus and GPT, alongside domestic ones like DeepSeek and GLM'
+          - 'A practiced hand at vibe coding — leaning on AI to crack any hard problem'
+
+  contact:
+    eyebrow: 'Get in Touch'
+    title: "Let's build something"
+    lead: 'Feel free to reach out if you have interesting ideas or collaboration opportunities.'
+    items:
+      - icon: 'fas fa-envelope'
+        label: 'Email'
+        value: 'zhoutaoq1029@126.com'
+        url: 'mailto:zhoutaoq1029@126.com'
+      - icon: 'fab fa-github'
+        label: 'GitHub'
+        value: '@zhoutaoq'
+        url: 'https://github.com/zhoutaoq'
+      - icon_svg: 'gitee'
+        label: 'Gitee'
+        value: '@zhoutaoq1029'
+        url: 'https://gitee.com/zhoutaoq1029'
+      - icon: 'fab fa-linkedin'
+        label: 'LinkedIn'
+        value: 'zhoutaoq'
+        url: 'https://linkedin.com/in/zhoutaoq'
+      - icon: 'fab fa-twitter'
+        label: 'Twitter'
+        value: '@hideZhou'
+        url: 'https://twitter.com/hideZhou'
+
+zh:
+  eyebrow: '软件开发工程师 · 上海'
+  hello: '你好，我是'
+  name: 'zhoutaoq'
+  typed_prefix: '我构建'
+  typed:
+    - '分布式服务'
+    - '服务端应用'
+    - '数据管道'
+    - 'AI Coding 流程'
+  lead: '六年全栈开发经验，主要从事服务端开发，毕业于上海应用技术大学电子信息工程专业。参与过券商投行、政务、零售方向的系统。'
+  actions:
+    - label: '联系我'
+      url: 'mailto:zhoutaoq1029@126.com'
+      icon: 'fas fa-envelope'
+      variant: 'primary'
+    - label: 'GitHub'
+      url: 'https://github.com/zhoutaoq'
+      icon: 'fab fa-github'
+      variant: 'ghost'
+    - label: 'Gitee'
+      url: 'https://gitee.com/zhoutaoq1029'
+      icon_svg: 'gitee'
+      variant: 'ghost'
+  chips:
+    - icon: 'fas fa-map-marker-alt'
+      text: '中国 · 上海'
+    - icon: 'fas fa-graduation-cap'
+      text: '上海应用技术大学'
+    - icon: 'fas fa-envelope'
+      text: 'zhoutaoq1029@126.com'
+      url: 'mailto:zhoutaoq1029@126.com'
+
+  stats:
+    - value: 7
+      suffix: '+'
+      label: '年 Java 经验'
+      note: '后端与分布式服务'
+    - value: 7
+      suffix: '+'
+      label: '年 JavaScript 经验'
+      note: '前端开发与 Bug 修复'
+    - value: 6
+      suffix: '+'
+      label: '年 Python 经验'
+      note: '自动化脚本与 REST API'
+    - value: 3
+      suffix: '+'
+      label: '年 Go 经验'
+      note: '服务与内部工具'
+    - value: 10
+      suffix: '+'
+      label: '个上线系统'
+      note: '投行 · 司法 · 零售'
+
+  about:
+    eyebrow: '关于我'
+    lead: '从光电信息工程到物联网，再一路成长为全栈程序员，主要从事服务端开发。'
+    paragraphs:
+      - '本科先读光电信息科学与工程专业，大三转入电子信息工程专业物联网方向。期间对 Web 应用开发产生兴趣，毕业之后主要从事服务端开发工作。'
+    facts:
+      - label: '教育背景'
+        value: '上海应用技术大学'
+      - label: '专业学历'
+        value: '电子信息工程（物联网方向）· 本科'
+      - label: '工作年限'
+        value: '6 年以上软件开发经验'
+      - label: '所在地'
+        value: '中国 · 上海'
+      - label: '技术方向'
+        value: '服务端开发 · 分布式服务 · AI Coding'
+
+  experience:
+    eyebrow: '工作经历'
+    items:
+      - period: '2024 至今'
+        org: '深圳市金证科技股份有限公司'
+        org_url: 'https://szkingdom.com/'
+        role: '主管开发工程师'
+        team: '上海研发部'
+        projects:
+          - name: '新一代投行综合业务数字化平台'
+            url: '#project-kingdom-ib'
+        tags: ['Java', 'Spring Boot', '低代码', 'OceanBase', '华为 CCE', 'CI/CD']
+      - period: '2021 — 2024'
+        org: '上海同道信息技术有限公司'
+        org_url: 'https://homolo.com/'
+        role: '后端开发工程师'
+        team: '技术部'
+        projects:
+          - name: '上海市人民调解系统'
+            url: '#project-mediation'
+          - name: '上海市司法行政审批系统'
+            url: '#project-judicial-approval'
+        tags: ['Java', 'Spring Cloud', 'MyBatis', 'MySQL', 'Redis', '工作流']
+      - period: '2021'
+        org: '上海秉坤数码科技有限公司'
+        org_url: 'https://www.pekon.com/'
+        role: '后端开发工程师'
+        team: '新零售'
+        projects:
+          - name: '美妆品牌零售系统'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+      - period: '2020'
+        org: '上海冠勇信息科技有限公司'
+        org_url: 'https://www.firstbrave.com/'
+        role: '服务端开发实习生'
+        team: '技术部'
+        projects:
+          - name: '易犬版权监测平台'
+        tags: ['Python', 'Flask', 'Java', 'Spring', 'MySQL', '数据爬虫']
+
+  projects:
+    eyebrow: '项目经历'
+    items:
+      - name: '新一代投行综合业务数字化平台'
+        anchor: 'project-kingdom-ib'
+        org: '深圳市金证科技股份有限公司'
+        summary: '覆盖投行承做、审批、台账与报表全流程的业务数字化平台，已投产落地两家中大型券商。'
+        tags: ['Java', 'Spring', 'koca 低代码', 'OceanBase', '华为 CCE', 'CI/CD']
+      - name: '上海市人民调解系统'
+        anchor: 'project-mediation'
+        org: '上海同道信息技术有限公司'
+        summary: '面向全市调解工作的案件与当事人管理，以及背后的数据报表层。'
+        tags: ['Java', 'Spring Cloud', 'MySQL', 'Redis', '大屏接口']
+      - name: '上海市司法行政审批系统'
+        anchor: 'project-judicial-approval'
+        org: '上海同道信息技术有限公司'
+        summary: '上海市司法局的内部审批工作流，并接入更广的政务服务生态。'
+        tags: ['Java', '工作流', '单点登录', '电子签章', '支付宝']
+      - name: '美妆品牌零售系统'
+        anchor: 'project-pekon-retail'
+        org: '上海秉坤数码科技有限公司'
+        summary: '面向美妆企业的全方位零售管理平台，覆盖门店 POS、会员、库存与订货协同。'
+        tags: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'POS', 'CDC']
+
+  focus:
+    eyebrow: '我在意什么'
+    title: '做有价值的项目'
+    items:
+      - icon: 'fas fa-globe'
+        title: '对社会有益'
+        text: '做真正对使用者有用的东西，而不是只在演示里好看的半成品。'
+      - icon: 'fas fa-chart-line'
+        title: '有商业价值'
+        text: '服务要扛得住压力、跑得稳、在线上自己赚得回成本。'
+      - icon: 'fas fa-heart'
+        title: '人性化'
+        text: '接口和界面都好上手、不容易用错，维护起来也不折磨人。'
+
+  stack:
+    eyebrow: '技术栈'
+    lead: '七年开发经验横跨 Java、JavaScript、Python 与 Go，Linux 优先的工作流，再加上一整套 AI Coding 链路。'
+    groups:
+      - icon: 'fas fa-server'
+        title: '后端开发'
+        tags: ['Java', 'Go', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
+        points:
+          - '7 年以上 Java 开发经验'
+          - '3 年以上 Go 开发经验'
+          - '涵盖 Java Web 应用、SDK 开发、工具类开发'
+          - '熟练使用 Spring、Spring Boot、Spring Cloud，读过部分源码可做扩展'
+          - '擅长构建稳定、高性能的分布式服务'
+      - icon: 'fas fa-database'
+        title: '数据库 & 中间件'
+        tags: ['MySQL', 'SQL Server', 'OceanBase', 'Redis', 'MongoDB', 'RocketMQ', 'RabbitMQ', 'Elasticsearch']
+        points:
+          - '关系型数据库：MySQL、SQL Server，以及信创数据库 OceanBase'
+          - '对数据库的锁、事务、索引有比较深入的理解'
+          - 'Redis、MongoDB；理解分布式锁、缓存淘汰策略与数据持久化'
+          - 'RocketMQ、RabbitMQ 处理异步流程，用 Elasticsearch 支撑大数据量报表'
+      - icon: 'fas fa-code'
+        title: '前端开发'
+        tags: ['JavaScript', 'Vue', 'jQuery', 'ElementUI']
+        points:
+          - '7 年以上 JavaScript 使用经验'
+          - '能够独立完成前端功能开发和 Bug 修复'
+          - '使用 Vue 构建个人项目和小型应用'
+      - icon: 'fab fa-python'
+        title: 'Python 开发'
+        tags: ['Python', 'Flask', 'FastAPI']
+        points:
+          - '6 年以上 Python 开发经验'
+          - '擅长编写自动化脚本和工具'
+          - '能够基于 FastAPI、Flask 开发 RESTful API 接口'
+      - icon: 'fas fa-cubes'
+        title: 'DevOps & 运维'
+        tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
+        points:
+          - '6 年以上 Linux 使用经验'
+          - '擅长使用 Shell 脚本自动化处理重复性工作'
+          - '熟悉 Docker 容器化和 Kubernetes 编排，用过华为 CCE 搭建集群环境'
+          - '用 GitLab CI/CD 与 GitHub Actions 完成前后端应用的构建与发布'
+      - icon: 'fas fa-robot'
+        title: 'AI Coding'
+        tags: ['Claude Code', 'Codex', 'Cursor', 'Opus', 'GPT', 'DeepSeek', 'GLM']
+        points:
+          - '日常使用 Claude Code、Codex、Cursor 等 AI 编程工具'
+          - '使用 Opus、GPT 等前沿模型和 DeepSeek、GLM 等国产模型'
+          - '熟练 vibe coding，擅长借助 AI 完成任何难题。'
+
+  contact:
+    eyebrow: '联系合作'
+    title: '一起做点东西'
+    lead: '如果你有好的想法或合作机会，欢迎随时与我联系。'
+    items:
+      - icon: 'fas fa-envelope'
+        label: '邮箱'
+        value: 'zhoutaoq1029@126.com'
+        url: 'mailto:zhoutaoq1029@126.com'
+      - icon: 'fab fa-github'
+        label: 'GitHub'
+        value: '@zhoutaoq'
+        url: 'https://github.com/zhoutaoq'
+      - icon_svg: 'gitee'
+        label: 'Gitee'
+        value: '@zhoutaoq1029'
+        url: 'https://gitee.com/zhoutaoq1029'
+      - icon: 'fab fa-linkedin'
+        label: 'LinkedIn'
+        value: 'zhoutaoq'
+        url: 'https://linkedin.com/in/zhoutaoq'
+      - icon: 'fab fa-twitter'
+        label: 'Twitter'
+        value: '@hideZhou'
+        url: 'https://twitter.com/hideZhou'

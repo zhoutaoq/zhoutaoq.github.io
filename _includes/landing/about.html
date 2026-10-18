@@ -1,0 +1,31 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section id="about" class="band">
+  <div class="band__inner">
+    <header class="sec__head" data-reveal>
+      <p class="sec__eyebrow">{{ t.about.eyebrow }}</p>
+      {% if t.about.title %}<h2 class="sec__title">{{ t.about.title }}</h2>{% endif %}
+      <p class="sec__lead">{{ t.about.lead }}</p>
+    </header>
+
+    <div class="about">
+      <div class="about__prose" data-reveal>
+        {% for p in t.about.paragraphs %}
+          <p class="about__p">{{ p }}</p>
+        {% endfor %}
+      </div>
+
+      <aside class="card about__facts" data-reveal style="--d:80ms" data-spotlight>
+        <span class="card__icon" aria-hidden="true"><i class="fas fa-id-card"></i></span>
+        <dl class="facts">
+          {% for f in t.about.facts %}
+            <div class="facts__row">
+              <dt class="facts__label">{{ f.label }}</dt>
+              <dd class="facts__value">{{ f.value }}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>

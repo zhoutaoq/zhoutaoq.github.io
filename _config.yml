@@ -1,0 +1,111 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Site Settings
+locale                   : "zh-CN"
+title                    : "Zhoutaoq's Personal Profile"
+title_separator          : "·"
+# 顶栏站标文字。窄屏放不下长标题，这里单列一个短名
+brand                    : "zhoutaoq profile"
+name                     : &name "zhoutaoq"
+description              : &description "Software Developer in Shanghai — full-stack, mostly server-side, with an AI coding workflow."
+url                      : https://zhoutaoq.github.io
+baseurl                  : ""
+repository               : "zhoutaoq/zhoutaoq.github.io"
+comments:
+  provider               : false # No comments for personal site
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Analytics
+analytics:
+  provider               : false # No analytics for now
+
+
+# Site Author
+author:
+  name             : "zhoutaoq"
+  avatar           : "profile.png"
+  bio              : "Full-stack Developer · Server-side · AI Coding"
+  location         : "Shanghai, China"
+  email            : "zhoutaoq1029@126.com"
+  github           : "zhoutaoq"
+  gitee            : "zhoutaoq1029"
+  linkedin         : "zhoutaoq"
+  twitter          : "hideZhou"
+  instagram        : "zhoutaoq1029"
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Gemfile
+  - LICENSE
+  - node_modules
+  - vendor
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..6
+
+
+# Collections
+collections:
+
+# Defaults
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Asia/Shanghai # Local timezone
+
+
+# Plugins
+plugins:
+  - jekyll-redirect-from

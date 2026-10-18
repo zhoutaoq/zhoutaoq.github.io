@@ -1,0 +1,57 @@
+{% assign t = site.data.profile[page.lang] %}
+
+<section id="experience" class="band band--surface">
+  <div class="band__inner">
+    <header class="sec__head" data-reveal>
+      <p class="sec__eyebrow">{{ t.experience.eyebrow }}</p>
+      {% if t.experience.title %}<h2 class="sec__title">{{ t.experience.title }}</h2>{% endif %}
+      {% if t.experience.lead %}<p class="sec__lead">{{ t.experience.lead }}</p>{% endif %}
+    </header>
+
+    <ol class="timeline">
+      {% for job in t.experience.items %}
+        <li class="timeline__item" data-reveal style="--d:{{ forloop.index0 | times: 80 }}ms">
+          <span class="timeline__year">{{ job.period }}</span>
+          <span class="timeline__rail" aria-hidden="true">{% unless forloop.last %}<i class="fas fa-arrow-up"></i>{% endunless %}</span>
+          <div class="card timeline__body" data-spotlight>
+            <h3 class="card__title timeline__company">
+              {%- if job.org_url -%}
+                <a class="timeline__link" href="{{ job.org_url }}" target="_blank" rel="noopener">{{ job.org }}<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+              {%- else -%}
+                {{ job.org }}
+              {%- endif -%}
+            </h3>
+            {%- capture meta -%}{%- if job.role -%}{{ job.role }}{%- endif -%}{%- if job.role and job.team %} · {% endif -%}{%- if job.team -%}{{ job.team }}{%- endif -%}{%- endcapture -%}
+            {%- assign meta = meta | strip -%}
+            {%- if meta != '' -%}
+              <p class="timeline__meta">{{ meta }}</p>
+            {%- endif -%}
+            {%- if job.projects and job.projects.size > 0 -%}
+              <ul class="timeline__projects">
+                {%- for p in job.projects -%}
+                  <li>
+                    {%- if p.url and p.url != '' -%}
+                      {%- assign scheme = p.url | slice: 0, 4 -%}
+                      {%- if scheme == 'http' -%}
+                        <a class="timeline__proj" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                      {%- else -%}
+                        <a class="timeline__proj timeline__proj--jump" href="{{ p.url }}">{{ p.name }}<i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                      {%- endif -%}
+                    {%- else -%}
+                      <span class="timeline__proj timeline__proj--plain">{{ p.name }}</span>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+            {%- if job.tags and job.tags.size > 0 -%}
+              <ul class="tags">
+                {%- for tag in job.tags -%}<li class="tags__item">{{ tag }}</li>{%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

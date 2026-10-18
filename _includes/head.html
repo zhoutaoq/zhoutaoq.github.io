@@ -1,0 +1,33 @@
+{% include base_path %}
+
+<meta charset="utf-8">
+
+{% include seo.html %}
+
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.className = root.className.replace(/\bno-js\b/g, '') + ' js ';
+    /* 主题在样式表之前定下来：默认跟随浏览器设置，本地有手动覆盖时才用本地的，暗色首屏不闪白 */
+    var stored = null;
+    try { stored = window.localStorage.getItem('theme'); } catch (e) {}
+    var mode = stored === 'light' || stored === 'dark' ? stored : 'auto';
+    var dark = mode === 'auto'
+      ? !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      : mode === 'dark';
+    root.setAttribute('data-theme-mode', mode);
+    if (dark) root.setAttribute('data-theme', 'dark');
+  })();
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
