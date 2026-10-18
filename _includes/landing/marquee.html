@@ -1,6 +1,6 @@
 <div class="marquee" data-marquee>
   <div class="marquee__track">
-    {% assign tech = "Java,Spring,Spring Boot,Spring Cloud,MyBatis,Nacos,Feign,MySQL,SQL Server,OceanBase,Redis,MongoDB,RocketMQ,RabbitMQ,Elasticsearch,JavaScript,Vue,jQuery,ElementUI,Python,FastAPI,Linux,Shell,Docker,Kubernetes,Nginx,GitLab CI,GitHub Actions,Claude Code,MCP,LangChain,Milvus" | split: "," %}
+    {% assign tech = "Java,Go,Spring,Spring Boot,Spring Cloud,MyBatis,Nacos,Feign,MySQL,SQL Server,OceanBase,Redis,MongoDB,RocketMQ,RabbitMQ,Elasticsearch,JavaScript,Vue,jQuery,ElementUI,Python,Flask,FastAPI,Linux,Shell,Docker,Kubernetes,Nginx,GitLab CI,GitHub Actions,Claude Code,Codex,Cursor" | split: "," %}
     {% for pass in (1..2) %}
       <div class="marquee__group"{% if pass == 2 %} aria-hidden="true"{% endif %}>
         {% for item in tech %}<span class="marquee__item">{{ item }}</span>{% endfor %}

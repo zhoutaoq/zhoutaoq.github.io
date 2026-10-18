@@ -7,10 +7,10 @@ en:
   typed_prefix: 'I build'
   typed:
     - 'distributed services'
-    - 'Java backends'
+    - 'server-side applications'
     - 'data pipelines'
-    - 'AI-assisted workflows'
-  lead: 'Six years of backend development, graduated from Shanghai University of Applied Technology in Electronic Information Engineering. I have delivered investment-banking, government and retail systems.'
+    - 'AI coding workflows'
+  lead: 'Six years of full-stack development, mostly on the server side. Graduated from Shanghai University of Applied Technology in Electronic Information Engineering, and have contributed to investment-banking, government and retail systems.'
   actions:
     - label: 'Get in Touch'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -34,28 +34,32 @@ en:
       url: 'mailto:zhoutaoq1029@126.com'
 
   stats:
-    - value: 6
+    - value: 7
       suffix: '+'
       label: 'Years with Java'
       note: 'Backend & distributed services'
-    - value: 6
+    - value: 7
       suffix: '+'
       label: 'Years with JavaScript'
       note: 'Frontend development & debugging'
-    - value: 3
+    - value: 6
       suffix: '+'
       label: 'Years with Python'
       note: 'Automation scripts & REST APIs'
-    - value: 4
-      suffix: ''
-      label: 'Systems delivered'
+    - value: 3
+      suffix: '+'
+      label: 'Years with Go'
+      note: 'Services & internal tooling'
+    - value: 10
+      suffix: '+'
+      label: 'Systems in production'
       note: 'Investment banking · justice · retail'
 
   about:
     eyebrow: 'About'
-    lead: 'From optoelectronics to IoT, then on to Java backend engineering.'
+    lead: 'From optoelectronics to IoT, then on to full-stack engineering, mostly on the server side.'
     paragraphs:
-      - 'I started out in Optoelectronic Information Science and Engineering, then switched in my third year to Electronic Information Engineering, specialising in IoT. Web application development is what caught my interest, and Java / backend work is what I have been doing since graduating.'
+      - 'I started out in Optoelectronic Information Science and Engineering, then switched in my third year to Electronic Information Engineering, specialising in IoT. Web application development is what caught my interest, and server-side work is what I have been doing since graduating.'
     facts:
       - label: 'Education'
         value: 'Shanghai University of Applied Technology'
@@ -66,7 +70,7 @@ en:
       - label: 'Location'
         value: 'Shanghai, China'
       - label: 'Direction'
-        value: 'Backend · Distributed services · AI-assisted development'
+        value: 'Server-side · Distributed services · AI Coding'
 
   experience:
     eyebrow: 'Experience'
@@ -106,7 +110,7 @@ en:
         team: 'Technology Department'
         projects:
           - name: 'Yiquan Copyright Monitoring Platform'
-        tags: ['Java', 'Spring', 'MySQL', 'Web Crawler']
+        tags: ['Python', 'Flask', 'Java', 'Spring', 'MySQL', 'Web Crawler']
 
   projects:
     eyebrow: 'Projects'
@@ -148,13 +152,14 @@ en:
 
   stack:
     eyebrow: 'Tech Stack'
-    lead: 'Six years of Java and JavaScript, three years of Python, a Linux-first workflow, and an AI-assisted toolchain on top.'
+    lead: 'Seven years across Java, JavaScript and Python, three with Go, a Linux-first workflow, and an AI coding toolchain on top.'
     groups:
       - icon: 'fas fa-server'
         title: 'Backend Development'
-        tags: ['Java', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
+        tags: ['Java', 'Go', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
         points:
-          - '6+ years of Java development experience'
+          - '7+ years of Java development experience'
+          - '3+ years of Go development experience'
           - 'Java Web applications, SDK development and internal tooling'
           - 'Spring, Spring Boot and Spring Cloud — enough of the source read to extend it'
           - 'Stable, high-performance distributed services'
@@ -170,16 +175,16 @@ en:
         title: 'Frontend Development'
         tags: ['JavaScript', 'Vue', 'jQuery', 'Element UI']
         points:
-          - '6+ years of JavaScript experience'
+          - '7+ years of JavaScript experience'
           - 'Independent frontend development and bug fixing'
           - 'Personal projects and small applications with Vue'
       - icon: 'fab fa-python'
         title: 'Python Development'
-        tags: ['Python', 'FastAPI']
+        tags: ['Python', 'Flask', 'FastAPI']
         points:
-          - '3+ years of Python development experience'
+          - '6+ years of Python development experience'
           - 'Automation scripts and internal tools'
-          - 'RESTful API services'
+          - 'RESTful API services with FastAPI and Flask'
       - icon: 'fas fa-cubes'
         title: 'DevOps & Infrastructure'
         tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
@@ -189,13 +194,12 @@ en:
           - 'Docker containerisation and Kubernetes orchestration, including Huawei CCE'
           - 'Building and releasing frontend and backend apps through GitLab CI/CD and GitHub Actions'
       - icon: 'fas fa-robot'
-        title: 'AI-Assisted Engineering'
-        tags: ['Claude Code', 'Codex', 'Qoder', 'Trae', 'MCP', 'Skills', 'LangChain', 'Milvus']
+        title: 'AI Coding'
+        tags: ['Claude Code', 'Codex', 'Cursor', 'Opus', 'GPT', 'DeepSeek', 'GLM']
         points:
-          - 'AI coding tools in daily use: Claude Code, Codex, Qoder and Trae'
-          - 'Comfortable with the MCP protocol, and with packaging workflows into reusable Skills'
-          - 'Able to run the whole loop with AI — write, build, release'
-          - 'Grasp of AI agent fundamentals, the LangChain ecosystem, Milvus and embeddings'
+          - 'AI coding tools in daily use: Claude Code, Codex and Cursor'
+          - 'Frontier models such as Opus and GPT, alongside domestic ones like DeepSeek and GLM'
+          - 'A practiced hand at vibe coding — leaning on AI to crack any hard problem'
 
   contact:
     eyebrow: 'Get in Touch'
@@ -230,10 +234,10 @@ zh:
   typed_prefix: '我构建'
   typed:
     - '分布式服务'
-    - 'Java 后端'
+    - '服务端应用'
     - '数据管道'
-    - 'AI 辅助研发流程'
-  lead: '六年后端开发经验，毕业于上海应用技术大学电子信息工程专业。交付过券商投行、政务、零售方向的系统。'
+    - 'AI Coding 流程'
+  lead: '六年全栈开发经验，主要从事服务端开发，毕业于上海应用技术大学电子信息工程专业。参与过券商投行、政务、零售方向的系统。'
   actions:
     - label: '联系我'
       url: 'mailto:zhoutaoq1029@126.com'
@@ -257,28 +261,32 @@ zh:
       url: 'mailto:zhoutaoq1029@126.com'
 
   stats:
-    - value: 6
+    - value: 7
       suffix: '+'
       label: '年 Java 经验'
       note: '后端与分布式服务'
-    - value: 6
+    - value: 7
       suffix: '+'
       label: '年 JavaScript 经验'
       note: '前端开发与 Bug 修复'
-    - value: 3
+    - value: 6
       suffix: '+'
       label: '年 Python 经验'
       note: '自动化脚本与 REST API'
-    - value: 4
-      suffix: ''
-      label: '个交付上线的系统'
+    - value: 3
+      suffix: '+'
+      label: '年 Go 经验'
+      note: '服务与内部工具'
+    - value: 10
+      suffix: '+'
+      label: '个上线系统'
       note: '投行 · 司法 · 零售'
 
   about:
     eyebrow: '关于我'
-    lead: '从光电信息工程到物联网，再一路做到 Java 后端。'
+    lead: '从光电信息工程到物联网，再一路成长为全栈程序员，主要从事服务端开发。'
     paragraphs:
-      - '本科先读光电信息科学与工程专业，大三转入电子信息工程专业物联网方向。期间对 Web 应用开发产生兴趣，毕业之后一直从事 Java / 后端开发工作。'
+      - '本科先读光电信息科学与工程专业，大三转入电子信息工程专业物联网方向。期间对 Web 应用开发产生兴趣，毕业之后主要从事服务端开发工作。'
     facts:
       - label: '教育背景'
         value: '上海应用技术大学'
@@ -289,7 +297,7 @@ zh:
       - label: '所在地'
         value: '中国 · 上海'
       - label: '技术方向'
-        value: '后端 · 分布式服务 · AI 辅助研发'
+        value: '服务端开发 · 分布式服务 · AI Coding'
 
   experience:
     eyebrow: '工作经历'
@@ -329,7 +337,7 @@ zh:
         team: '技术部'
         projects:
           - name: '易犬版权监测平台'
-        tags: ['Java', 'Spring', 'MySQL', '数据爬虫']
+        tags: ['Python', 'Flask', 'Java', 'Spring', 'MySQL', '数据爬虫']
 
   projects:
     eyebrow: '项目经历'
@@ -371,13 +379,14 @@ zh:
 
   stack:
     eyebrow: '技术栈'
-    lead: '六年 Java 与 JavaScript，三年 Python，Linux 优先的工作流，再加上一整套 AI 辅助研发链路。'
+    lead: '七年开发经验横跨 Java、JavaScript、Python 与 Go，Linux 优先的工作流，再加上一整套 AI Coding 链路。'
     groups:
       - icon: 'fas fa-server'
         title: '后端开发'
-        tags: ['Java', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
+        tags: ['Java', 'Go', 'Spring', 'Spring Boot', 'Spring Cloud', 'MyBatis', 'Nacos', 'Feign']
         points:
-          - '6 年以上 Java 开发经验'
+          - '7 年以上 Java 开发经验'
+          - '3 年以上 Go 开发经验'
           - '涵盖 Java Web 应用、SDK 开发、工具类开发'
           - '熟练使用 Spring、Spring Boot、Spring Cloud，读过部分源码可做扩展'
           - '擅长构建稳定、高性能的分布式服务'
@@ -393,16 +402,16 @@ zh:
         title: '前端开发'
         tags: ['JavaScript', 'Vue', 'jQuery', 'ElementUI']
         points:
-          - '6 年以上 JavaScript 使用经验'
+          - '7 年以上 JavaScript 使用经验'
           - '能够独立完成前端功能开发和 Bug 修复'
           - '使用 Vue 构建个人项目和小型应用'
       - icon: 'fab fa-python'
         title: 'Python 开发'
-        tags: ['Python', 'FastAPI']
+        tags: ['Python', 'Flask', 'FastAPI']
         points:
-          - '3 年以上 Python 开发经验'
+          - '6 年以上 Python 开发经验'
           - '擅长编写自动化脚本和工具'
-          - '能够开发 RESTful API 接口'
+          - '能够基于 FastAPI、Flask 开发 RESTful API 接口'
       - icon: 'fas fa-cubes'
         title: 'DevOps & 运维'
         tags: ['Linux', 'Shell', 'Docker', 'Kubernetes', 'Nginx', 'GitLab CI', 'GitHub Actions']
@@ -412,13 +421,12 @@ zh:
           - '熟悉 Docker 容器化和 Kubernetes 编排，用过华为 CCE 搭建集群环境'
           - '用 GitLab CI/CD 与 GitHub Actions 完成前后端应用的构建与发布'
       - icon: 'fas fa-robot'
-        title: 'AI 辅助研发'
-        tags: ['Claude Code', 'Codex', 'Qoder', 'Trae', 'MCP', 'Skills', 'LangChain', 'Milvus']
+        title: 'AI Coding'
+        tags: ['Claude Code', 'Codex', 'Cursor', 'Opus', 'GPT', 'DeepSeek', 'GLM']
         points:
-          - '日常使用 Claude Code、Codex、Qoder、Trae 等 AI 编程工具'
-          - '熟悉 MCP 原理和使用，能把工作流整理成可复用的 Skill'
-          - '能借助 AI 完成全栈开发：独立走通编码、构建、发布全流程'
-          - '了解 AI Agent 开发基础、LangChain 生态，以及 Milvus 与向量化原理'
+          - '日常使用 Claude Code、Codex、Cursor 等 AI 编程工具'
+          - '使用 Opus、GPT 等前沿模型和 DeepSeek、GLM 等国产模型'
+          - '熟练 vibe coding，擅长借助 AI 完成任何难题。'
 
   contact:
     eyebrow: '联系合作'

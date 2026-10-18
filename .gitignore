@@ -15,3 +15,6 @@ Gemfile.lock
 /*.log
 target/
 build/
+changelog
+
+

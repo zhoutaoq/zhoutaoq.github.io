@@ -12,7 +12,7 @@ title_separator          : "·"
 # 顶栏站标文字。窄屏放不下长标题，这里单列一个短名
 brand                    : "zhoutaoq profile"
 name                     : &name "zhoutaoq"
-description              : &description "Software Developer | Java Specialist"
+description              : &description "Software Developer in Shanghai — full-stack, mostly server-side, with an AI coding workflow."
 url                      : https://zhoutaoq.github.io
 baseurl                  : ""
 repository               : "zhoutaoq/zhoutaoq.github.io"
@@ -34,7 +34,7 @@ analytics:
 author:
   name             : "zhoutaoq"
   avatar           : "profile.png"
-  bio              : "Software Developer | Java | Spring | Python"
+  bio              : "Full-stack Developer · Server-side · AI Coding"
   location         : "Shanghai, China"
   email            : "zhoutaoq1029@126.com"
   github           : "zhoutaoq"
